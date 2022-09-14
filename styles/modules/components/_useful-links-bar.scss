@@ -1,0 +1,23 @@
+ul.useful-links-bar-nav {
+        & > :first-child {
+            @apply bg-gray-light;
+
+            &:hover {
+                @apply bg-white;
+            }
+        }
+
+        @apply text-lg flex flex-row content-center justify-start items-center text-left;
+
+        & li {
+            @apply mr-3 py-3 px-6 rounded-full transition-all duration-300;
+
+            &:hover{
+                @apply bg-gray-light;
+            }
+
+            & a {
+                @apply w-full;
+            }
+        }
+}

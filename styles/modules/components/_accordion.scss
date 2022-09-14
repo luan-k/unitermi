@@ -1,0 +1,70 @@
+.px-app,
+.px-app *,
+.px-app *::before,
+.px-app *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.px-app {
+  width: 90%;
+  max-width: 900px;
+}
+
+.px-acc-item {
+  margin-bottom: 0.7rem;
+  border-radius: 6px;
+}
+.px-acc-head {
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: var(--px-acc-color-headbg);
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.px-acc-item.active .px-acc-head {
+  border-radius: 5px 5px 0 0;
+}
+.px-acc-title {
+  font-size: 1.1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.px-acc-title > i {
+  font-size: 1.6rem;
+  color: var(--pxdemo-color-primary);
+  margin-right: 0.5rem;
+}
+.px-acc-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  transition: all .1s;
+}
+.px-acc-item.active .px-acc-icon {
+  transform: rotateZ(180deg);
+}
+.px-acc-body {
+  height: 0;
+  border-radius: 0 0 5px 5px;
+  background-color: var(--px-acc-color-bodybg);
+  overflow: hidden;
+  transition: all .1s;
+}
+.px-acc-content {
+  padding: 1rem;
+}
+@media (max-width: 700px){
+	.px-app {
+  	margin: auto;
+	}
+
+}

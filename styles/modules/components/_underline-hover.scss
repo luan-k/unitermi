@@ -1,0 +1,20 @@
+.underline-hover{
+    text-decoration: none;
+    position: relative;
+	&:after{
+		bottom: -4px;
+		content: "";
+		display: block;
+		height: 2px;
+		left: 0;
+		position: absolute;
+		opacity: 0.6;
+		transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+		width: 0;
+		background-color: rgba(165, 26, 29);
+	}
+	&:hover:after{
+		width: 100%;
+		opacity: 0.9;
+	}
+}

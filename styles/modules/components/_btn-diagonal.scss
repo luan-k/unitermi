@@ -1,0 +1,38 @@
+/* GENERAL BUTTON STYLING */
+
+.btn-diagonal {
+  background: none;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  color: rgb(255, 0, 0);
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+
+  overflow: hidden;
+  &::after{
+	transition: all 0.3s;
+
+	height: 100%;
+	left: -35%;
+	top: 0;
+	transform: skew(50deg);
+	transition-duration: 0.6s;
+	transform-origin: top left;
+	width: 0;
+  }
+  &::before,
+  &::after {
+	background: rgb(255, 0, 0);
+	content: '';
+	position: absolute;
+	z-index: -1;
+  }
+  &:hover {
+	color: #2ecc71;
+	&:after {
+		height: 100%;
+		width: 135%;
+	}
+  }
+}
