@@ -51,35 +51,28 @@ class Search {
         <div class="" >
               ${
                 results.products.length
-                  ? '<div class="row"> <h3 class="title-3 mt-5 mb-3 text-white"> Produtos </h3> <hr class="white">'
+                  ? '<div class="row"> <h3 class="title-3 mt-5 mb-3 text-white"> Produtos </h3> <hr class="white"> <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12"> '
                   : '<h3 class="title-4 text-white mt-5 mb-3 text-center">nenhum produto corresponde a sua pesquisa</h3>'
               }
                 ${results.products
                   .map(
                     (item) =>
                       `
-                      <a href="${item.permalink}" class="link-search-results produto grid grid-cols-1">
-                          <div class="search-product-wraper grid grid-cols-1">
-                            <div class="row grid grid-cols-1 md:grid-cols-12">
-                              <div class="col-img-search md:col-span-4">
-                                  <div class="img-wraper-search">
-                                      <img src="${item.image}" alt="">
-                                  </div>
-                              </div>
-                              <div class="col-text-search md:col-span-8">
-                                  <div class="row grid grid-cols-1 md:grid-cols-12">
-                                      <div class="title-3 title-search md:col-span-12">${item.title}</div>
+											<a href="${item.permalink}" class="products-banner-carousel-card underline-hover rounded-md relative bg-white">
+											<div class="products-banner-carousel-card__img-wrapper">
+												<img class="products-banner-carousel-card__img-wrapper--img"  src="${item.image}" alt="imagem produto">
+											</div>
+											<div class="products-banner-carousel-card__body pt-12 px-9 pb-9">
+												<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
+													${item.title}
+												</h3>
+											</div>
 
-                                  </div>
-                                  <div class="text-search hidden md:grid grid-cols-1">${item.descricao}</div>
-                              </div>
-                            </div>
-                          </div>
-                      </a>
+										</a>
                       `
                   )
                   .join("")}
-                  <div class='btn-wraper justify-center search my-5 px-9 py-6 rounded-2xl'> <a href="${
+									</div><div class='btn-wraper justify-center search my-5 px-9 py-6 rounded-2xl'> <a href="${
                     WKodeData.root_url
                   }/produtos" class='btn-wk text-center px-9 py-6 rounded-2xl bg-white text-dark-primary'> ver todos os Produtos </a> </div>
               ${results.products.length ? "</div>" : ""}
