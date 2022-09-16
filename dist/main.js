@@ -12939,6 +12939,35 @@ module.exports = anime;
 
 /***/ }),
 
+/***/ "./scripts/modules/navbar.js":
+/*!***********************************!*\
+  !*** ./scripts/modules/navbar.js ***!
+  \***********************************/
+/***/ (() => {
+
+var multi_menus = document.querySelectorAll(' li.menu-item.menu-item-has-children ');
+
+var _loop = function _loop(i) {
+  var menu = multi_menus[i];
+  var el = document.createElement('div');
+  el.classList.add('collapser');
+  menu.insertBefore(el, menu.children[1]);
+  var collapser = menu.querySelector('.collapser');
+  collapser.addEventListener('click', function () {
+    if (menu.classList.contains('active')) {
+      menu.classList.remove('active');
+    } else {
+      menu.classList.add('active');
+    }
+  });
+};
+
+for (var i = 0; i < multi_menus.length; i++) {
+  _loop(i);
+}
+
+/***/ }),
+
 /***/ "./node_modules/jquery/dist/jquery.js":
 /*!********************************************!*\
   !*** ./node_modules/jquery/dist/jquery.js ***!
@@ -23927,16 +23956,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_animation_animations_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_animation_animations_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_animation_anime_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/animation/anime.js */ "./scripts/modules/animation/anime.js");
 /* harmony import */ var _modules_animation_anime_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_animation_anime_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordion */ "./scripts/modules/accordion.js");
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/Search */ "./scripts/modules/Search.js");
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/navbar */ "./scripts/modules/navbar.js");
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/accordion */ "./scripts/modules/accordion.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/Search */ "./scripts/modules/Search.js");
 
 
 
 
 
 
-var search = new _modules_Search__WEBPACK_IMPORTED_MODULE_5__["default"]();
+
+var search = new _modules_Search__WEBPACK_IMPORTED_MODULE_6__["default"]();
 jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_1___default()('.toggler').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_1___default()('nav.nav-menu').slideToggle(500);
