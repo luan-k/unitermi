@@ -2,6 +2,7 @@ import "../styles/index.scss";
 import $ from "jquery";
 import "./modules/animation/animations.js";
 import "./modules/animation/anime.js";
+import "./modules/navbar";
 import "./modules/accordion";
 import Search from "./modules/Search";
 
