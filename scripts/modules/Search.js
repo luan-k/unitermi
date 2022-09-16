@@ -48,80 +48,44 @@ class Search {
         this.searchField.val(),
       (results) => {
         this.resultsDiv.html(`
-      <div class="" >
-        
-          ${
-            results.postsArray.length
-              ? '<div class="row"> <h3 class="title-3 mt-5 mb-3 text-white"> Produtos </h3> <hr class="white">'
-              : '<h3 class="title-4 text-white mt-5 mb-3 text-center">nenhum produto corresponde a sua pesquisa</h3>'
-          }
-            ${results.postsArray
-              .map(
-                (item) =>
-                  `
-                  <a href="${item.permalink}" class="link-search-results grid grid-cols-1">
-                      <div class="col-12 search-product-wraper grid grid-cols-1">
-                        <div class="row grid grid-cols-1 md:grid-cols-12">
-                          <div class="col-12 col-sm-4 col-img-search md:col-span-4">
-                              <div class="img-wraper-search">
-                                  <img src="${item.image}" alt="">
+        <div class="" >
+              ${
+                results.products.length
+                  ? '<div class="row"> <h3 class="title-3 mt-5 mb-3 text-white"> Produtos </h3> <hr class="white">'
+                  : '<h3 class="title-4 text-white mt-5 mb-3 text-center">nenhum produto corresponde a sua pesquisa</h3>'
+              }
+                ${results.products
+                  .map(
+                    (item) =>
+                      `
+                      <a href="${item.permalink}" class="link-search-results produto grid grid-cols-1">
+                          <div class="search-product-wraper grid grid-cols-1">
+                            <div class="row grid grid-cols-1 md:grid-cols-12">
+                              <div class="col-img-search md:col-span-4">
+                                  <div class="img-wraper-search">
+                                      <img src="${item.image}" alt="">
+                                  </div>
                               </div>
-                          </div>
-                          <div class="col-12 col-sm-8 col-text-search md:col-span-8">
-                              <div class="row grid grid-cols-1 md:grid-cols-12">
-                                  <div class="col-12 col-sm-8 title-3 title-search md:col-span-12">${item.title}</div>
-                                  
+                              <div class="col-text-search md:col-span-8">
+                                  <div class="row grid grid-cols-1 md:grid-cols-12">
+                                      <div class="title-3 title-search md:col-span-12">${item.title}</div>
+
+                                  </div>
+                                  <div class="text-search hidden md:grid grid-cols-1">${item.descricao}</div>
                               </div>
-                              <div class="col-12 text-search hidden md:grid grid-cols-1">${item.descricao}</div>
-                          </div>
-                        </div>
-                      </div>
-                  </a>                
-                  `
-              )
-              .join("")}
-              <div class='btn-wraper justify-center search my-5 px-9 py-6 rounded-2xl'> <a href="${
-                WKodeData.root_url
-              }/produtos" class='btn-wk text-center px-9 py-6 rounded-2xl bg-white text-dark-primary'> ver todos os Produtos </a> </div> 
-          ${results.postsArray.length ? "</div>" : ""}
-        </div>
-        <div class="">
-            ${
-              results.servicos.length
-                ? '<div class="row"> <h3 class="title-3 mt-5 mb-3 text-white"> Serviços </h3> <hr class="white">'
-                : '<h3 class="title-4 text-white mt-5 mb-3 justify-center text-center">nenhum serviço corresponde a sua pesquisa</h3>'
-            }
-              ${results.servicos
-                .map(
-                  (item) =>
-                    `
-                    <a href="${item.permalink}" class="link-search-results servico grid grid-cols-1">
-                        <div class="col-12 search-product-wraper grid grid-cols-1">
-                          <div class="row grid grid-cols-1 md:grid-cols-12">
-                            <div class="col-12 col-sm-4 col-img-search md:col-span-4">
-                                <div class="img-wraper-search">
-                                    <img src="${item.image}" alt="">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-8 col-text-search md:col-span-8">
-                                <div class="row">
-                                    <div class="col-12 title-3 title-search grid grid-cols-1">${item.title}</div>
-                                    
-                                </div>
-                                <div class="col-12 text-search grid-cols-1 hidden md:grid">${item.descricao}</div>
                             </div>
                           </div>
-                        </div>
-                    </a>
-                    `
-                )
-                .join("")}
-                <div class='btn-wraper justify-center search my-5 px-9 py-6 rounded-2xl'> <a href="${
-                  WKodeData.root_url
-                }/servicos" class='btn-wk text-center text-white px-9 py-6 rounded-2xl bg-dark-primary'> ver todos os serviços </a> </div> 
-            ${results.servicos.length ? "</div>" : ""}
-        </div>
-        
+                      </a>
+                      `
+                  )
+                  .join("")}
+                  <div class='btn-wraper justify-center search my-5 px-9 py-6 rounded-2xl'> <a href="${
+                    WKodeData.root_url
+                  }/produtos" class='btn-wk text-center px-9 py-6 rounded-2xl bg-white text-dark-primary'> ver todos os Produtos </a> </div>
+              ${results.products.length ? "</div>" : ""}
+          </div>
+
+
       </div>
       `);
         this.isSpinnerVisible = false;
@@ -160,7 +124,7 @@ class Search {
               )
               .join("")}
           ${combinedResults.length ? "</ul>" : ""}
-  
+
         `);
         this.isSpinnerVisible = false;
       },

@@ -99,7 +99,7 @@
   }
   &::-webkit-scrollbar-track {
     --tw-bg-opacity: 1;
-    background-color: rgba(6, 78, 59, var(--tw-bg-opacity));
+    background-color: transparent;
     border-radius: 10px;
   }
 
@@ -239,7 +239,7 @@
   }
 }
 .active-bottom {
-  background-color: var(--greenPrimary);
+  @apply bg-unitermi-primary-redDark;
   height: 60vh;
   min-height: 37rem;
 
@@ -250,7 +250,6 @@
 }
 .search-trigger {
   margin-left: auto;
-	position: absolute;
 	right: 1rem;
 	top: 50%;
   transform: translateY(-50%);

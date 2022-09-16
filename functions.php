@@ -3,9 +3,13 @@
 /** Theme setup */
 require_once( 'inc/theme-setup.php' );
 
+require get_theme_file_path('/inc/search-route.php');
 function wkode_files(){
     wp_enqueue_style('wkode_main_styles', get_stylesheet_uri());
     wp_enqueue_script('main-js', get_theme_file_uri('/dist/main.js'), NULL, '1.0', true);
+	wp_localize_script('main-js', 'WKodeData', array(
+        'root_url' => get_site_url()
+    ));
     wp_enqueue_style('main-css', get_template_directory_uri() . '/dist/main.css');
 	wp_enqueue_script('wkode-font_awesome', '//kit.fontawesome.com/fde7c29e46.js', NULL, '1.0', true);
 	// ^^^^ remove later, temporary
