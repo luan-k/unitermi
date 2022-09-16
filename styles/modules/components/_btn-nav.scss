@@ -20,16 +20,17 @@
   content: "";
   width: 100%;
   height: 100%;
-  top: -110%;
+  max-height: 0;
+  top: 0;
   left: 0;
   z-index: -1;
   transition: all 0.35s;
-	border: solid 2px rgba(165, 26, 29);
+	// border: solid 2px rgba(165, 26, 29);
 	@apply bg-unitermi-primary-redDark;
 }
 .btn-nav.current-menu-item:before,
 .btn-nav.current-menu-item:after {
-	border: solid 2px rgba(165, 26, 29);
+	// border: solid 2px rgba(165, 26, 29);
 	@apply bg-unitermi-primary-redDark;
 }
 
@@ -51,5 +52,6 @@
 
 .btn-nav:hover:before,
 .btn-nav:hover:after {
-  top: 0;
+  max-height: 400%;
+  // top: 0;
 }

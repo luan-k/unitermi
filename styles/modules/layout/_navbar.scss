@@ -100,6 +100,27 @@ nav :nth-child(2) {
   align-items: center;
 }
 
+.menu-item {
+  background: #f3f4f6;
+}
+
+.menu-item > .sub-menu .menu-item-has-children > .sub-menu {
+  left: 0;
+  top: 0;
+  padding-left: .6rem;
+  min-width: 100%;
+  transition: 200ms;
+  z-index: 8;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menu-item > .sub-menu .menu-item-has-children:hover > .sub-menu {
+  left: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+
 .menu-item > .sub-menu {
   position: absolute;
   top: 100%;
@@ -108,7 +129,9 @@ nav :nth-child(2) {
   gap: 1.6rem;
   left: 0;
   padding-left: .6rem;
-  min-width: 100%;
+  min-width: 120%;
+  z-index: 9;
+  // overflow: hidden;
   background: #a51a1d;
 
   & > li.menu-item:before, li.menu-item:after {
@@ -117,6 +140,7 @@ nav :nth-child(2) {
 
   & > li {
     min-width: 100%;
+    background: #a51a1d;
   }
   // display: none;
 }
@@ -237,6 +261,21 @@ li.menu-item{
 
 @media screen and (max-width: 768px) {
 
+  .menu-item > .sub-menu .menu-item-has-children > .sub-menu {
+    left: 0;
+    top: 100%;
+    padding-left: auto;
+    min-width: 100%;
+    visibility: visible;
+    opacity: 1;
+  }  
+
+  .menu-item > .sub-menu .menu-item-has-children:hover > .sub-menu {
+    left: 0;
+    top: 100%;
+  }
+
+
   header ~ .wrapper {
     padding-top: max(17%, 122.5px);
   }
@@ -260,7 +299,7 @@ li.menu-item{
   .nav-menu-list {
     visibility: none;
     transition: 400ms;
-    max-height: 0;
+    max-height: 0!important;
     overflow: hidden;
     position: fixed;
     display: flex!important;
@@ -286,7 +325,7 @@ li.menu-item{
   }
 
   .side-menu:checked ~ .nav-menu-list {
-    max-height: 200vh;
+    max-height: 200vh!important;
   }
 
   .menu-item.menu-item-has-children {
@@ -311,11 +350,15 @@ li.menu-item{
       background: inherit!important;
     }
 
-    .sub-menu {
-      transition: 400ms;
+    ul.sub-menu {
+      transition: max-height 400ms!important;
       margin-top: 0;
       overflow: hidden;
-      max-height: 0;
+      max-height: 0!important;
+    }
+
+    li.menu-item, li.menu-item:hover {
+      background: inherit!important;
     }
 
     &.active {

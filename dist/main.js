@@ -11017,7 +11017,7 @@ var Search = /*#__PURE__*/function () {
                 )
                 .join("")}
             ${combinedResults.length ? "</ul>" : ""}
-           `);
+            `);
           this.isSpinnerVisible = false;
         },
         () => {
