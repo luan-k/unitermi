@@ -252,7 +252,8 @@
   margin-left: auto;
 	position: absolute;
 	right: 1rem;
-	top: 1rem;
+	top: 50%;
+  transform: translateY(-50%);
 }
 @media (max-width: 500px) {
   .search-term {
