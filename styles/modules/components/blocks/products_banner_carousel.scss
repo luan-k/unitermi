@@ -93,7 +93,7 @@
 			box-shadow: 0px 0px 45px -4px rgba(0,0,0,0.21);
 		}
 		&__img-wrapper{
-			min-height: 24rem;
+			min-height: 9rem;
 			background-color: white;
 			position: relative;
 			overflow: hidden;
@@ -102,6 +102,15 @@
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
+				height: 100%!important;
+				width: auto!important;
+			}
+		}
+		&__body{
+			&--title{
+				max-height: 4rem;
+				min-height: 4rem;
+				overflow-y: hidden;
 			}
 		}
 	}
@@ -119,4 +128,7 @@
 }
 .products-banner-carousel-card{
 	max-height: 36rem;
+}
+.product-page-img-wrapper{
+	min-height: 15rem;
 }

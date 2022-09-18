@@ -35,7 +35,7 @@
                 </div>
                 <div class="bg-gray-100 text-gray-600 max-w-full text-3xl  space-x-12 font-medium menu-mob nav-menu-session" id="navbarNavAltMarkup">
                     <input class="side-menu" type="checkbox" id="side-menu"/>
-                    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>    
+                    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
                     <div class="nav-menu-list" >
                     <!-- <ul class="container relative flex items-center"> -->
                         <!-- <li  class="btn-nav mobile-nav-logic <?php if (is_page('inicio')) echo' current-menu-item' ?>"><a href="<?php echo esc_url(site_url('/inicio')); ?>" class=" py-5 px-6 text-white md:text-gray-600 hover:text-white transition duration-300">Home </a></li>

@@ -257,7 +257,7 @@ function my_register_sidebars() {
 /**
  * Change number of related products output
  */
-function woo_related_products_limit() {
+/* function woo_related_products_limit() {
 	global $product;
 
 	  $args['posts_per_page'] = 6;
@@ -278,3 +278,14 @@ function lw_loop_shop_per_page( $products ) {
  $products = 6;
  return $products;
 }
+ */
+
+ // Options: menu_order, popularity, rating, date, price, price-desc
+
+function my_woocommerce_catalog_orderby( $orderby ) {
+    unset($orderby["price"]);
+    unset($orderby["price-desc"]);
+    unset($orderby["rating"]);
+    return $orderby;
+}
+add_filter( "woocommerce_catalog_orderby", "my_woocommerce_catalog_orderby", 20 );

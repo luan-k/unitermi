@@ -71,7 +71,7 @@ get_header( 'shop' );?>
 
 				woocommerce_product_loop_start(); ?>
 				<div class="grid grid-cols-1 md:grid-cols-4">
-							<div class="">
+							<div class="md:pr-32">
 								<?php echo do_shortcode('[yith_wcan_filters slug="default-preset"]') ?>
 							</div>
 						<?php

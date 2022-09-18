@@ -49,7 +49,7 @@ if ( $title || $img || $posts) :
 		<section class="products-banner-carousel mb-56" >
 			<div class="products-banner-carousel__hero">
 				<?php if($img){ ?>
-					<a class="products-banner-carousel__img relative" href="<?php if($posts_select == 'relational'){ $terms = get_the_terms( $posts_manual[0]->ID, 'product_cat' ); foreach ($terms as $term) { $product_cat_id = $term->term_id; $link = get_term_link( (int)$product_cat_id, 'product_cat' ); echo $link; break; }} elseif ($posts_select == 'taxonomy'){ echo esc_url(site_url() . '/product-category/' . $posts[0]->slug); } ?>">
+					<a class="products-banner-carousel__img relative" data-anime="slow-slider" href="<?php if($posts_select == 'relational'){ $terms = get_the_terms( $posts_manual[0]->ID, 'product_cat' ); foreach ($terms as $term) { $product_cat_id = $term->term_id; $link = get_term_link( (int)$product_cat_id, 'product_cat' ); echo $link; break; }} elseif ($posts_select == 'taxonomy'){ echo esc_url(site_url() . '/product-category/' . $posts[0]->slug); } ?>">
 						<?php if($title){ ?>
 							<h2 class="products-banner-carousel__title
 								<?php
@@ -76,7 +76,7 @@ if ( $title || $img || $posts) :
 					<div class="products-banner-carousel__products">
 						<div class="m-auto gap-3 mt-6 container grid grid-cols-6"> <?php
 						?>
-							<a href="<?php $terms = get_the_terms( $posts_manual[0]->ID, 'product_cat' ); foreach ($terms as $term) { $product_cat_id = $term->term_id; $link = get_term_link( (int)$product_cat_id, 'product_cat' ); echo $link; break; } ?>" class="products-banner-carousel__phrase inline relative underline-hover">
+							<a  data-anime="left" href="<?php $terms = get_the_terms( $posts_manual[0]->ID, 'product_cat' ); foreach ($terms as $term) { $product_cat_id = $term->term_id; $link = get_term_link( (int)$product_cat_id, 'product_cat' ); echo $link; break; } ?>" class="products-banner-carousel__phrase inline relative underline-hover">
 								<h4 class="products-banner-carousel__phrase--title pr-6">
 									<?php
 									if($link_text){
@@ -89,7 +89,7 @@ if ( $title || $img || $posts) :
 								<svg class="products-banner-carousel__phrase--svg w-9 inline text-gray-300 fill-current pr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg>
 							</a>
 
-							<div class="grid grid-cols-4 col-span-4 gap-3"> <?php
+							<div class="grid grid-cols-4 col-span-4 gap-3"  data-anime="bottom"> <?php
 								for ($i = 0; $i < 4; $i++){ ?>
 
 									<?php
@@ -109,12 +109,15 @@ if ( $title || $img || $posts) :
 											<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
 												<?php echo wp_trim_words( $post_title, 5);  ?>
 											</h3>
+											<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-unitermi-primary-redDark font-josefin-sans font-bold text-lg">
+												Onde Comprar
+											</div>
 										</div>
 									</a>
 									<?php
 								} ?>
 							</div>
-							<div class="ml-9 products-banner-carousel__btn inline relative">
+							<div class="ml-9 products-banner-carousel__btn inline relative"  data-anime="right">
 								<a href="<?php $terms = get_the_terms( $posts_manual[0]->ID, 'product_cat' ); foreach ($terms as $term) { $product_cat_id = $term->term_id; $link = get_term_link( (int)$product_cat_id, 'product_cat' ); echo $link; break; } ?>" class="btn-nav items-center justify-center rounded-2xl py-6 px-6 w-full text-center border-2 border-unitermi-primary-redDark text-unitermi-primary-redDark font-josefin-sans font-bold text-lg">
 									VER TODOS
 								</a>
@@ -142,7 +145,7 @@ if ( $title || $img || $posts) :
 
 						if ( $query->have_posts() ) {?>
 							<div class="m-auto gap-3 mt-6 container grid grid-cols-6">
-								<a href="<?php echo esc_url(site_url() . '/product-category/' . $posts[0]->slug); ?>" class="products-banner-carousel__phrase inline relative underline-hover">
+								<a data-anime="left" href="<?php echo esc_url(site_url() . '/product-category/' . $posts[0]->slug); ?>" class="products-banner-carousel__phrase inline relative underline-hover">
 									<h4 class="products-banner-carousel__phrase--title pr-6">
 										<?php
 										if($link_text){
@@ -154,7 +157,7 @@ if ( $title || $img || $posts) :
 									</h4>
 									<svg class="products-banner-carousel__phrase--svg w-9 inline text-gray-300 fill-current pr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg>
 								</a>
-								<div class="grid grid-cols-4 col-span-4 gap-3"> <?php
+								<div class="grid grid-cols-4 col-span-4 gap-3" data-anime="bottom"> <?php
 									while ( $query->have_posts() ) {
 										$query->the_post();
 
@@ -168,13 +171,16 @@ if ( $title || $img || $posts) :
 												<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
 													<?php echo wp_trim_words( get_the_title(), 5);  ?>
 												</h3>
+												<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-unitermi-primary-redDark font-josefin-sans font-bold text-lg">
+													Onde Comprar
+												</div>
 											</div>
 
 										</a>
 										<?php
 									} ?>
 								</div>
-								<div class="ml-9 products-banner-carousel__btn inline relative">
+								<div class="ml-9 products-banner-carousel__btn inline relative" data-anime="right">
 									<a href="<?php echo esc_url(site_url() . '/product-category/' . $posts[0]->slug); ?>" class="btn-nav items-center justify-center rounded-2xl py-6 px-6 w-full text-center border-2 border-unitermi-primary-redDark text-unitermi-primary-redDark font-josefin-sans font-bold text-lg">
 										VER TODOS
 									</a>

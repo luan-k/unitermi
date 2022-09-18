@@ -5,7 +5,8 @@ add_action('rest_api_init', 'WkodeRegisterSearch');
 function WkodeRegisterSearch(){
     register_rest_route('wk/v1', 'search', array(
         'methods' => WP_REST_SERVER::READABLE,
-        'callback' => 'WkodeSearchResults'
+        'callback' => 'WkodeSearchResults',
+		'permission_callback' => '__return_true'
     ));
 }
 
@@ -23,7 +24,7 @@ function WkodeSearchResults($data){
 
         if(get_post_type() == 'product'){
             array_push($results['products'], array(
-                
+
                 'title' => wp_trim_words( get_the_title(), 4),
                 'permalink' => get_the_permalink(),
                 'image' => get_the_post_thumbnail_url(0, 'ProductImageList'),

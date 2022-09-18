@@ -1,0 +1,56 @@
+/* animações */
+[data-anime] {
+  opacity: 0;
+  transition: 0.6s;
+}
+
+[data-anime="left"] {
+  transform: translate3d(-100px, 0, 0);
+}
+[data-anime="top-left"] {
+  transform: translate3d(-100px, -100px, 0);
+  transition: 1s;
+}
+[data-anime="top"] {
+  transform: translate3d(0px, -100px, 0);
+  transition: 1s;
+}
+[data-anime="top-right"] {
+  transform: translate3d(+100px, -100px, 0);
+}
+[data-anime="right"] {
+  transform: translate3d(+100px, 0, 0);
+}
+[data-anime="bottom-right"] {
+  transform: translate3d(+100px, 50px, 0);
+}
+[data-anime="bottom"] {
+  transform: translate3d(0px, 50px, 0);
+}
+[data-anime="bottom-left"] {
+  transform: translate3d(-100px, 50px, 0);
+}
+[data-anime="slow-slider"] {
+  transform: translate3d(-200px, 0, 0);
+  transition: 0.5s ease-in;
+}
+
+[data-anime="back"] {
+  transform: translate3d(0px, 0px, -500px);
+}
+
+[data-anime="basic"] {
+  background-image: url("");
+  transition: 1.2s;
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+[data-anime="basic"].animate {
+  transform: translate3d(0px, 0px, 0px);
+  opacity: 1;
+}
+/* FIM ANIMAÇÕES */

@@ -1,9 +1,12 @@
 @use "base/tailwind";
 @use "base/fonts";
+@use "base/animations";
 
 @use "components/search-overlay";
+@use "components/select";
 @use "components/titles";
 @use "components/accordion";
+@use "components/btn-left";
 @use "components/btn-input";
 @use "components/btn-nav";
 @use "components/btn-wk";

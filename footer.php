@@ -1,5 +1,5 @@
 
-            <footer class="page-footer bg-unitermi-primary-redDark text-white pb-20 pt-30 mt-24 single-bg">
+            <footer class="page-footer bg-unitermi-primary-redDark text-white pb-20 pt-30 mt-24 single-bg <?php if(is_front_page()){ echo "mt-6"; } ?>">
 
                 <!-- Footer Links -->
                 <div class="container text-center md:text-left text-lg">
