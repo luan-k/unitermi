@@ -12,7 +12,7 @@ function wkode_files(){
     ));
     wp_enqueue_style('main-css', get_template_directory_uri() . '/dist/main.css');
 	wp_enqueue_script('wkode-font_awesome', '//kit.fontawesome.com/fde7c29e46.js', NULL, '1.0', true);
-	// ^^^^ remove later, temporary
+
 }
 
 add_action('wp_enqueue_scripts', 'wkode_files');
