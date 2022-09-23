@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );?>
 <div class="container">
-	<div class="grid grid-cols-1 py-24 text-xl">
+	<div class="grid grid-cols-1 py-16 text-xl">
 		<!-- <div class="col-span-4 lg:col-span-3 order-2 md:order-1">
 			<?php
 				/**
@@ -29,7 +29,7 @@ get_header( 'shop' );?>
 			 */
 			//do_action( 'woocommerce_sidebar' );?>
 		</div> -->
-		<div class="col-span-1 lg:col-span-9 order-1 md:order-2">
+		<div class="col-span-1 lg:col-span-9 order-1 md:order-2 mt-36">
 			<?php
 			/**
 			* Hook: woocommerce_before_main_content.
@@ -72,7 +72,7 @@ get_header( 'shop' );?>
 				woocommerce_product_loop_start(); ?>
 				<div class="grid grid-cols-1 md:grid-cols-4">
 							<div class="md:pr-32">
-								<?php echo do_shortcode('[yith_wcan_filters slug="default-preset"]') ?>
+								<?php echo do_shortcode('[fe_widget]') ?>
 							</div>
 						<?php
 

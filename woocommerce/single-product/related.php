@@ -29,7 +29,7 @@ if ( $related_products ) :
 			echo do_shortcode( '[pt_view id="VIEW_ID" post_id="' . implode( ',', $pids ) . '"]' );
 		} else {
 			?>
-			<div class="grid grid-cols-1 md:grid-cols-6 gap-7">
+			<div class="grid grid-cols-1 md:grid-cols-4  gap-16">
 				<?php foreach ( $related_products as $related_product ) : ?>
 
 					<?php

@@ -69,7 +69,7 @@ const config = {
 if (process.env.SERVER) {
   config.plugins.push(
     new BrowserSyncPlugin({
-      proxy: "unitermi.local",
+      proxy: "uni-teste.local",
       files: ["**/*.php", "**/*.css", "**/*.scss"],
       notify: false,
     })

@@ -5,7 +5,7 @@
 		overflow: hidden;
 		padding-bottom: 1rem;
 		&:hover .products-banner-carousel__title{
-			color: #fff;
+			@apply text-unitermi-primary-gray;
 			&:after {
 				height: 100%;
 				width: 135%;
@@ -17,7 +17,8 @@
 		overflow: hidden;
 		display: inline;
 		position: absolute;
-		background-color: white;
+		color: white;
+		@apply bg-unitermi-primary-redDark;
 		width: fit-content;
 		padding: 0 6rem;
 		height: 6rem;
@@ -30,7 +31,7 @@
 		font-weight: 700;
 		letter-spacing: 0.6rem;
 		line-height: 7rem;
-		@apply text-unitermi-primary-gray;
+		transition: all 0.3s;
 		&::after{
 			transition: all 0.3s;
 
@@ -44,12 +45,14 @@
 		}
 		&::before,
 		&::after {
-		  @apply bg-unitermi-primary-redDark;
+		  background-color: white;
 		  content: '';
 		  position: absolute;
 		  z-index: -1;
 		}
-
+		&.font-montserrat{
+			line-height: 6rem;
+		}
 	}
 	&__phrase{
 		&--title{
@@ -76,7 +79,7 @@
 	}
 	&__btn{
 		position: relative;
-		.btn-nav{
+		.btn-banner{
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -111,13 +114,17 @@
 				max-height: 4rem;
 				min-height: 4rem;
 				overflow-y: hidden;
+				text-align: center;
 			}
 		}
 	}
 }
+.products-banner-carousel-card{
+	max-height: 30rem;
+}
 @media (max-width: 700px){
 	.products-banner-carousel-card__img-wrapper{
-		min-height: 41rem;
+		min-height: 15rem;
 	}
 	.products-banner-carousel-card {
 		transition: all 0.3s;
@@ -125,10 +132,11 @@
 		border-radius: 0.5rem;
 		margin: 0.5rem 3rem;
 	}
+	.products-banner-carousel-card{
+		max-height: none;
+	}
 }
-.products-banner-carousel-card{
-	max-height: 36rem;
-}
+
 .product-page-img-wrapper{
 	min-height: 15rem;
 }

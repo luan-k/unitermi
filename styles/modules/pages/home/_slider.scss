@@ -50,13 +50,14 @@ section#slider-custom {
     }
   }
 }
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   section#slider-custom {
     max-width: none !important;
     height: 15rem !important;
     max-height: none !important;
     overflow: hidden !important;
     width: auto !important;
+		min-width: 100vw!important;
 
     & > div {
       max-width: inherit !important;
@@ -100,3 +101,4 @@ section#slider-custom {
     }
   }
 }
+ */

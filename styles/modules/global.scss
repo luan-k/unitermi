@@ -6,9 +6,11 @@
 @use "components/select";
 @use "components/titles";
 @use "components/accordion";
+@use "components/carousel";
 @use "components/btn-left";
 @use "components/btn-input";
 @use "components/btn-nav";
+@use "components/btn-banner";
 @use "components/btn-wk";
 @use "components/btn-diagonal";
 @use "components/hr";
@@ -103,4 +105,29 @@ nav.woocommerce-pagination{
 			}
 		}
 	}
+}
+
+.wpc-edit-filter-set {
+	display: none;
+}
+
+form.woocommerce-ordering {
+    display: none;
+}
+
+@media (max-width: 768px){
+	nav.woocommerce-breadcrumb {
+		position: initial;
+	}
+}
+
+#primary> #main > .wpc-filters-open-button-container.wpc-open-button-490 > a.wpc-filters-open-widget {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	border-radius: 0.6rem;
+	border: 0;
+	background: #a51a1d;
+	color: white;
+	padding: 1.5rem 0;
 }

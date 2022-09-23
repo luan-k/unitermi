@@ -53,3 +53,12 @@ div#primary > main#main {
 .product_meta{
 	display: none;
 }
+
+nav.woocommerce-breadcrumb{
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+}

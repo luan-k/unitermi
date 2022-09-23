@@ -11,12 +11,12 @@
                                 central de atendimento
                             </h4>
 							<div class="icon-nav flex items-center justify-center md:justify-start text-2xl space-x-4">
-                                <a target="_blank" class="py-5 px-3 text-white" href=""><i class="text-white fab fa-whatsapp"></i> </a>
-                                <a target="_blank" class="py-5 px-3 text-white" href="" ><i class="text-white fas fa-phone-alt"></i></a>
-                                <a target="_blank" class="py-5 px-3 text-white" href=""><i class="text-white fab fa-facebook-f"></i></a>
+                                <!-- <a target="_blank" class="py-5 px-3 text-white" href=""><i class="text-white fab fa-whatsapp"></i> </a> -->
+                                <a target="_blank" class="py-5 px-3 text-white" href="tel:4832869093" ><i class="text-white fas fa-phone-alt"></i></a>
+                                <!-- <a target="_blank" class="py-5 px-3 text-white" href=""><i class="text-white fab fa-facebook-f"></i></a> -->
                                 <a target="_blank" class="py-5 px-3 text-white" href="<?php echo esc_url(site_url('/contato')); ?>"><i class="text-white far fa-envelope"></i></a>
                                 <a target="_blank" href="https://www.instagram.com/unitermi/" class="py-5 px-3 text-white"><i class="text-white fab fa-instagram"></i></i></a>
-                                <a target="_blank" href="#" class="py-5 px-3 text-white"><i class="text-white fab fa-twitter"></i></a>
+                                <!-- <a target="_blank" href="#" class="py-5 px-3 text-white"><i class="text-white fab fa-twitter"></i></a> -->
                                 <a target="_blank" href="#" class="py-5 px-3 text-white"><i class="text-white fab fa-youtube"></i></a>
                             </div>
                             <hr class="white">

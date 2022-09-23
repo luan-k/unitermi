@@ -68,7 +68,7 @@ $code  = get_field( 'product_code' );
 		do_action( 'woocommerce_single_product_summary' );
 		?>
 		<!-- <div class="flex items-center justify-center"> -->
-			<a href="<?php echo esc_url(site_url('/contato')); ?>" class="btn-input leading-4 items-center justify-center rounded-2xl mt-3 mx-auto py-7 px-16 text-center border-2 border-unitermi-primary-redDark text-unitermi-primary-redDark font-josefin-sans font-bold text-xl">
+			<a href="<?php echo esc_url(site_url('/contato')); ?>" class="btn-input leading-4 items-center justify-center rounded-2xl mt-3 mx-auto py-7 px-16 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-xl">
 				Onde Comprar
 			</a>
 		<!-- </div> -->

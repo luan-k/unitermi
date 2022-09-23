@@ -43,7 +43,7 @@ function wkode_features() {
     add_image_size('ProductImageList', 500, 500, true);
     add_image_size('ProductImageSingle', 800, 1000, true);
     add_image_size('heroBannerImage', 1600, 546, true);
-    add_image_size('ImageCard', 193, 237, true);
+    add_image_size('ImageCard', 237, 260, true);
 }
 add_action('after_setup_theme', 'wkode_features');
 
@@ -257,28 +257,28 @@ function my_register_sidebars() {
 /**
  * Change number of related products output
  */
-/* function woo_related_products_limit() {
+function woo_related_products_limit() {
 	global $product;
 
-	  $args['posts_per_page'] = 6;
+	  $args['posts_per_page'] = 3;
 	  return $args;
   }
   add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args', 20 );
 	function jk_related_products_args( $args ) {
-	  $args['posts_per_page'] = 6; // 4 related products
+	  $args['posts_per_page'] = 4; // 4 related products
 	  $args['columns'] = 6; // arranged in 2 columns
 	  return $args;
   }
 
 
 // Change the Number of WooCommerce Products Displayed Per Page
-add_filter( 'loop_shop_per_page', 'lw_loop_shop_per_page', 30 );
+/* add_filter( 'loop_shop_per_page', 'lw_loop_shop_per_page', 30 );
 
 function lw_loop_shop_per_page( $products ) {
  $products = 6;
  return $products;
-}
- */
+} */
+
 
  // Options: menu_order, popularity, rating, date, price, price-desc
 
