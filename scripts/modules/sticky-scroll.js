@@ -9,13 +9,11 @@ window.onload = function WindowLoad ( event ) {
   function scrollFunction() {
     if (document.body.scrollTop > headerHeight || document.documentElement.scrollTop > headerHeight) {
       header.classList.add('header--sm');
-      console.log('sm');
     }else if (document.body.scrollTop < headerHeight || document.documentElement.scrollTop < headerHeight){
       header.classList.remove('header--sm');
     }
      else {
       header.classList.remove('header--sm');
-      console.log('bg');
     }
   }
 }
