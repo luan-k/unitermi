@@ -74,7 +74,7 @@ if ( $title || $img || $posts) :
 				<?php }
 				if($posts_select == 'relational'){ ?>
 					<div class="products-banner-carousel__products">
-						<div class="m-auto gap-3 mt-6 container md:px-28 grid grid-cols-1 md:grid-cols-6"> <?php
+						<div class="m-auto gap-3 mt-6 container grid grid-cols-1 md:grid-cols-6"> <?php
 						?>
 							<?php if( wp_is_mobile()){ ?>
 								<div class="grid grid-cols-1 md:grid-cols-4 md:col-span-4 gap-3"  data-anime="bottom"> <?php
@@ -97,7 +97,7 @@ if ( $title || $img || $posts) :
 												<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
 													<?php echo wp_trim_words( $post_title, 5);  ?>
 												</h3>
-												<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg">
+												<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
 													Onde Comprar
 												</div>
 											</div>
@@ -118,7 +118,7 @@ if ( $title || $img || $posts) :
 									</h4>
 									<svg class="products-banner-carousel__phrase--svg w-9 inline text-gray-300 fill-current pr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg>
 								</a>
-								<div class="grid grid-cols-4 col-span-4 gap-3"  data-anime="bottom"> <?php
+								<div class="grid grid-cols-4 col-span-4 gap-1"  data-anime="bottom"> <?php
 									for ($i = 0; $i < 4; $i++){ ?>
 
 										<?php
@@ -138,7 +138,7 @@ if ( $title || $img || $posts) :
 												<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
 													<?php echo wp_trim_words( $post_title, 5);  ?>
 												</h3>
-												<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg">
+												<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
 													Onde Comprar
 												</div>
 											</div>
@@ -190,7 +190,7 @@ if ( $title || $img || $posts) :
 													<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
 														<?php echo wp_trim_words( get_the_title(), 5);  ?>
 													</h3>
-													<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg">
+													<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
 														Onde Comprar
 													</div>
 												</div>
@@ -212,7 +212,7 @@ if ( $title || $img || $posts) :
 										</h4>
 										<svg class="products-banner-carousel__phrase--svg w-9 inline text-gray-300 fill-current pr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg>
 									</a>
-									<div class="grid grid-cols-4 col-span-4 gap-3" data-anime="bottom"> <?php
+									<div class="grid grid-cols-4 col-span-4 gap-1" data-anime="bottom"> <?php
 										while ( $query->have_posts() ) {
 											$query->the_post();
 
@@ -226,7 +226,7 @@ if ( $title || $img || $posts) :
 													<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
 														<?php echo wp_trim_words( get_the_title(), 5);  ?>
 													</h3>
-													<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg">
+													<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
 														Onde Comprar
 													</div>
 												</div>

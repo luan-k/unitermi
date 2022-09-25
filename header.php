@@ -9,7 +9,7 @@
 
 <body <?php body_class(); ?> >
 			<div class="wraper" >
-        <header >
+        <header class="header">
             <nav>
                 <div class="bg-unitermi-primary-redDark max-w-full logo-nav">
                     <div class="flex justify-center md:justify-between">

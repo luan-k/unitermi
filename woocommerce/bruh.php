@@ -208,7 +208,7 @@ get_header( 'shop' );?>
 
 
 
-				?> <div id="Shop-id" class="grid grid-cols-1 md:grid-cols-4 gap-7 col-span-3 mt-20 md:mt-0 pb-64" data-anime="bottom">
+				?> <div id="Shop-id" class="shop-loop-custom grid grid-cols-1 md:grid-cols-4 gap-7 col-span-3 mt-20 pb-64 items-start content-start " data-anime="bottom">
 				<?php if ( wc_get_loop_prop( 'total' ) ) {
 					while ( have_posts() ) {
 						the_post();

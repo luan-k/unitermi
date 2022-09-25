@@ -23,7 +23,7 @@ nav ul li a {
 
 /* Start Navbar */
 nav ul > li {
-  padding: 15px;
+  padding: 1.5rem 2.7rem;
   display: inline-block;
   transition: all 0.3s ease;
   margin-left: -5px;
@@ -439,4 +439,52 @@ li.menu-item{
     }
 
   }
+}
+
+@media (min-width: 700px){
+	.header{
+		-webkit-box-shadow: 0px 110px 112px -23px rgba(0,0,0,0.31);
+		-moz-box-shadow: 0px 110px 112px -23px rgba(0,0,0,0.31);
+		box-shadow: 0px 110px 112px -23px rgba(0,0,0,0.31);
+		z-index: 9999;
+		transition: all 0.3s;
+		height: auto;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	/* 	&__main{
+			transition: all 0.3s;
+			height: auto;
+			&--logo{
+				&--sm{
+					display: none;
+				}
+			}
+			&--menu{
+				width: 60%;
+				ul#menu-primary li.menu-item{
+					@apply mr-3
+				}
+			}
+		} */
+		&--sm{
+			position: fixed;
+			animation: headerTop .3s;
+			.header__main--logo{
+				display: none;
+			}
+			.header__main--logo--sm{
+				display: block;
+			}
+			.header__top-bar{
+				display: none;
+			}
+		}
+	}
+
+	@keyframes headerTop{
+		from {top: -100%}
+		to {top: 0}
+	}
+
 }

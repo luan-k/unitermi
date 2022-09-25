@@ -12939,6 +12939,114 @@ module.exports = anime;
 
 /***/ }),
 
+/***/ "./scripts/modules/counter.js":
+/*!************************************!*\
+  !*** ./scripts/modules/counter.js ***!
+  \************************************/
+/***/ (() => {
+
+(function ($) {
+  $.fn.countTo = function (options) {
+    options = options || {};
+    return $(this).each(function () {
+      // set options for current element
+      var settings = $.extend({}, $.fn.countTo.defaults, {
+        from: $(this).data('from'),
+        to: $(this).data('to'),
+        speed: $(this).data('speed'),
+        refreshInterval: $(this).data('refresh-interval'),
+        decimals: $(this).data('decimals')
+      }, options); // how many times to update the value, and how much to increment the value on each update
+
+      var loops = Math.ceil(settings.speed / settings.refreshInterval),
+          increment = (settings.to - settings.from) / loops; // references & variables that will change with each update
+
+      var self = this,
+          $self = $(this),
+          loopCount = 0,
+          value = settings.from,
+          data = $self.data('countTo') || {};
+      $self.data('countTo', data); // if an existing interval can be found, clear it first
+
+      if (data.interval) {
+        clearInterval(data.interval);
+      }
+
+      data.interval = setInterval(updateTimer, settings.refreshInterval); // initialize the element with the starting value
+
+      render(value);
+
+      function updateTimer() {
+        value += increment;
+        loopCount++;
+        render(value);
+
+        if (typeof settings.onUpdate == 'function') {
+          settings.onUpdate.call(self, value);
+        }
+
+        if (loopCount >= loops) {
+          // remove the interval
+          $self.removeData('countTo');
+          clearInterval(data.interval);
+          value = settings.to;
+
+          if (typeof settings.onComplete == 'function') {
+            settings.onComplete.call(self, value);
+          }
+        }
+      }
+
+      function render(value) {
+        var formattedValue = settings.formatter.call(self, value, settings);
+        $self.html(formattedValue);
+      }
+    });
+  };
+
+  $.fn.countTo.defaults = {
+    from: 0,
+    // the number the element should start at
+    to: 0,
+    // the number the element should end at
+    speed: 1000,
+    // how long it should take to count between the target numbers
+    refreshInterval: 100,
+    // how often the element should be updated
+    decimals: 0,
+    // the number of decimal places to show
+    formatter: formatter,
+    // handler for formatting the value before rendering
+    onUpdate: null,
+    // callback method for every time the element is updated
+    onComplete: null // callback method for when the element finishes updating
+
+  };
+
+  function formatter(value, settings) {
+    return value.toFixed(settings.decimals);
+  }
+})(jQuery);
+
+jQuery(function ($) {
+  // custom formatting example
+  $('.count-number').data('countToOptions', {
+    formatter: function formatter(value, options) {
+      return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+    }
+  }); // start all the timers
+
+  $('.timer').each(count);
+
+  function count(options) {
+    var $this = $(this);
+    options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+    $this.countTo(options);
+  }
+});
+
+/***/ }),
+
 /***/ "./scripts/modules/navbar.js":
 /*!***********************************!*\
   !*** ./scripts/modules/navbar.js ***!
@@ -13030,6 +13138,62 @@ $(".logo-carousel").slick({
   ],
 });
  */
+
+/***/ }),
+
+/***/ "./scripts/modules/sticky-scroll.js":
+/*!******************************************!*\
+  !*** ./scripts/modules/sticky-scroll.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _throttle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./throttle.js */ "./scripts/modules/throttle.js");
+
+
+window.onload = function WindowLoad(event) {
+  window.addEventListener('scroll', (0,_throttle_js__WEBPACK_IMPORTED_MODULE_0__["default"])(scrollFunction, 200));
+  var header = document.querySelectorAll("header.header")[0];
+  var headerHeight = header.offsetHeight;
+
+  function scrollFunction() {
+    if (document.body.scrollTop > headerHeight || document.documentElement.scrollTop > headerHeight) {
+      header.classList.add('header--sm');
+      console.log('sm');
+    } else if (document.body.scrollTop < headerHeight || document.documentElement.scrollTop < headerHeight) {
+      header.classList.remove('header--sm');
+    } else {
+      header.classList.remove('header--sm');
+      console.log('bg');
+    }
+  }
+};
+
+/***/ }),
+
+/***/ "./scripts/modules/throttle.js":
+/*!*************************************!*\
+  !*** ./scripts/modules/throttle.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var throttle = function throttle(fn, delay) {
+  var lastTime = 0;
+  return function () {
+    var now = new Date().getTime();
+    if (now - lastTime < delay) return;
+    lastTime = now;
+    fn.apply(void 0, arguments);
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (throttle);
 
 /***/ }),
 
@@ -27043,12 +27207,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_animation_anime_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_animation_anime_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/navbar */ "./scripts/modules/navbar.js");
 /* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/accordion */ "./scripts/modules/accordion.js");
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_slick_config_product_slider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/slick-config/product-slider */ "./scripts/modules/slick-config/product-slider.js");
-/* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/Search */ "./scripts/modules/Search.js");
+/* harmony import */ var _modules_sticky_scroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/sticky-scroll */ "./scripts/modules/sticky-scroll.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/accordion */ "./scripts/modules/accordion.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_counter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/counter */ "./scripts/modules/counter.js");
+/* harmony import */ var _modules_counter__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_counter__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _modules_slick_config_product_slider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/slick-config/product-slider */ "./scripts/modules/slick-config/product-slider.js");
+/* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/Search */ "./scripts/modules/Search.js");
 
 
 
@@ -27058,7 +27225,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var search = new _modules_Search__WEBPACK_IMPORTED_MODULE_8__["default"]();
+
+
+var search = new _modules_Search__WEBPACK_IMPORTED_MODULE_10__["default"]();
 jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_1___default()('.toggler').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_1___default()('nav.nav-menu').slideToggle(500);
