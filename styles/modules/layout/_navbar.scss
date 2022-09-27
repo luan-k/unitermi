@@ -482,9 +482,11 @@ li.menu-item{
 		}
 		.logo-nav{
 			@apply container;
+			max-width: none;
 		}
 		.links-nav{
 			@apply container;
+			max-width: none;
 		}
 		#menu-menu-principal{
 			.menu-item:first-child{

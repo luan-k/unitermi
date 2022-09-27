@@ -5051,6 +5051,10 @@ li.menu-item:hover a{
     }
   }
 
+  .header .logo-nav{
+    max-width:none;
+  }
+
   .header .links-nav{
     width: 100%;
     margin-right: auto;
@@ -5095,6 +5099,10 @@ li.menu-item:hover a{
       padding-right: 10%;
       padding-left: 10%;
     }
+  }
+
+  .header .links-nav{
+    max-width:none;
   }
 
   .header #menu-menu-principal .menu-item:first-child{
