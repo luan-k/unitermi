@@ -1,13 +1,16 @@
 footer {
   padding: 3% 0;
   position: relative;
+	& > * {
+		@apply font-josefin-sans;
+	}
 }
 .footer-text {
   color: inherit;
-  font-family: "Roboto", sans-serif;
-  font-size: 0.9vw;
+	font-size: 1.8rem;
   margin-bottom: 1rem;
-  font-weight: 300;
+  font-weight: 400;
+	@apply font-josefin-sans;
 }
 .clip-footer-home {
   clip-path: polygon(0 33%, 100% 0, 100% 100%, 0% 100%);

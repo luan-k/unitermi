@@ -443,9 +443,9 @@ li.menu-item{
 
 @media (min-width: 700px){
 	.header{
-		-webkit-box-shadow: 0px 110px 112px -23px rgba(0,0,0,0.31);
-		-moz-box-shadow: 0px 110px 112px -23px rgba(0,0,0,0.31);
-		box-shadow: 0px 110px 112px -23px rgba(0,0,0,0.31);
+		-webkit-box-shadow: 0px 30px 85px 9px rgba(0,0,0,0.09);
+		-moz-box-shadow: 0px 30px 85px 9px rgba(0,0,0,0.09);
+		box-shadow: 0px 30px 85px 9px rgba(0,0,0,0.09);
 		z-index: 9999;
 		transition: all 0.3s;
 		height: auto;
@@ -480,6 +480,17 @@ li.menu-item{
 				display: none;
 			}
 		}
+		.logo-nav{
+			@apply container;
+		}
+		.links-nav{
+			@apply container;
+		}
+		#menu-menu-principal{
+			.menu-item:first-child{
+				padding-left: 0;
+			}
+		}
 	}
 
 	@keyframes headerTop{
@@ -488,3 +499,4 @@ li.menu-item{
 	}
 
 }
+

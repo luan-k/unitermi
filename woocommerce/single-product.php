@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-<div class="container z-10 pt-12">
+<div class="container z-10 pt-72">
 	<div class="grid grid-cols-1">
 		<!-- <div class="col-span-4 lg:col-span-3 order-2 md:order-1"> -->
 			<?php

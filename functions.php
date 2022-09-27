@@ -43,7 +43,7 @@ function wkode_features() {
     add_image_size('ProductImageList', 500, 500, true);
     add_image_size('ProductImageSingle', 800, 1000, true);
     add_image_size('heroBannerImage', 1600, 546, true);
-    add_image_size('ImageCard', 237, 260, true);
+    add_image_size('ImageCard', 360, 360, true);
 }
 add_action('after_setup_theme', 'wkode_features');
 

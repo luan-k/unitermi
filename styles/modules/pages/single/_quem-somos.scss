@@ -10,3 +10,9 @@
     align-content: center;
     justify-content: center;
 }
+
+@media (max-width: 700px){
+	.bg-image{
+		min-height: 77rem;
+	}
+}

@@ -85,7 +85,7 @@ if ( $title || $img || $posts) :
 										$post_category	 = get_the_category($post_id);
 										$post_title 	 = $posts_manual[$i]->post_title;
 										$post_subtitle   = get_field( 'subtitle', $post_id );
-										$post_image 	 = get_the_post_thumbnail_url($posts_manual[$i]->ID, 'ImageCard');
+										$post_image 	 = get_the_post_thumbnail_url($posts_manual[$i]->ID);
 										$link       	 = get_the_permalink( $posts_manual[$i] );
 										$post_content    = $posts_manual[$i]->post_content;
 										?>
@@ -126,7 +126,7 @@ if ( $title || $img || $posts) :
 										$post_category	 = get_the_category($post_id);
 										$post_title 	 = $posts_manual[$i]->post_title;
 										$post_subtitle   = get_field( 'subtitle', $post_id );
-										$post_image 	 = get_the_post_thumbnail_url($posts_manual[$i]->ID, 'ImageCard');
+										$post_image 	 = get_the_post_thumbnail_url($posts_manual[$i]->ID);
 										$link       	 = get_the_permalink( $posts_manual[$i] );
 										$post_content    = $posts_manual[$i]->post_content;
 										?>
@@ -184,7 +184,7 @@ if ( $title || $img || $posts) :
 
 											<a href="<?php the_permalink(); ?>" class="products-banner-carousel-card underline-hover rounded-md relative">
 												<div class="products-banner-carousel-card__img-wrapper">
-													<img class="products-banner-carousel-card__img-wrapper--img" src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'ImageCard') ?>" alt="imagem produto">
+													<img class="products-banner-carousel-card__img-wrapper--img" src="<?php echo get_the_post_thumbnail_url( get_the_ID()) ?>" alt="imagem produto">
 												</div>
 												<div class="products-banner-carousel-card__body pt-12 px-9 pb-9">
 													<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
@@ -220,7 +220,7 @@ if ( $title || $img || $posts) :
 
 											<a href="<?php the_permalink(); ?>" class="products-banner-carousel-card underline-hover rounded-md relative">
 												<div class="products-banner-carousel-card__img-wrapper">
-													<img class="products-banner-carousel-card__img-wrapper--img" src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'ImageCard') ?>" alt="imagem produto">
+													<img class="products-banner-carousel-card__img-wrapper--img" src="<?php echo get_the_post_thumbnail_url( get_the_ID()) ?>" alt="imagem produto">
 												</div>
 												<div class="products-banner-carousel-card__body pt-12 px-9 pb-9">
 													<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">

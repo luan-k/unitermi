@@ -33,7 +33,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-100 text-gray-600 max-w-full text-3xl  space-x-12 font-medium menu-mob nav-menu-session" id="navbarNavAltMarkup">
+                <div class="links-nav bg-gray-100 text-gray-600 max-w-full text-3xl  space-x-12 font-medium menu-mob nav-menu-session" id="navbarNavAltMarkup">
                     <input class="side-menu" type="checkbox" id="side-menu"/>
                     <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
                     <div class="nav-menu-list" >
