@@ -64,7 +64,6 @@ nav ul input {
 }
 
 .nav-menu-session, .logo-nav {
-  padding: 0 14.8%;
 
   & > div {
     min-width: 80%;
@@ -480,17 +479,16 @@ li.menu-item{
 				display: none;
 			}
 		}
-		.logo-nav{
+		.logo-nav-inner{
 			@apply container;
-			max-width: none;
 		}
 		.links-nav{
 			@apply container;
-			max-width: none;
 		}
-		#menu-menu-principal{
-			.menu-item:first-child{
-				padding-left: 0;
+		&.header{
+			background: #f3f4f6;
+			& > nav.header-nav{
+				background: #f3f4f6;
 			}
 		}
 	}
