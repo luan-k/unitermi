@@ -8,7 +8,7 @@
 	</h1>
 </section> -->
 <section class="container grid grid-cols-1 md:grid-cols-2 pt-72">
-	<div class="bg-image container order-2 md:order-1" style="background-image: url(<?php echo get_theme_file_uri('assets/images/unitermi-quem-somos.jpg'); ?>); ">
+	<div class="bg-image container order-2 md:order-1 -mb-24" style="background-image: url(<?php echo get_theme_file_uri('assets/images/unitermi-quem-somos.jpg'); ?>); ">
 	</div>
 	<div class="px-9 md:pl-24 font-montserrat py-60 order-1 md:order-2">
 		<h5 class=" text-3xl font-bold mb-20">Preserva o que é bom!</h5>

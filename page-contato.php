@@ -23,7 +23,7 @@
 					</li>
                 </ul>
                 <ul data-anime="left" class=" text-4xl mt-12">
-                    <li><i class="text-black fas fa-phone-alt mr-3" aria-hidden="true"></i> (48) 3286-9093 </li>
+                    <li> <a target="_blank" href="tel:4832869093"> <i class="text-black fas fa-phone-alt mr-3" aria-hidden="true"></i> (48) 3286-9093 </a> </li>
                 </ul>
 
 				<ul data-anime="left" class=" text-4xl mt-12">

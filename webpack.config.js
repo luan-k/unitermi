@@ -21,6 +21,7 @@ const config = {
 
   entry: {
     main: "./scripts/index.js",
+		sliderScript: "./scripts/modules/slider-next.js",
   },
 
   output: {

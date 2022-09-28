@@ -5,7 +5,6 @@ import "./modules/animation/anime.js";
 import "./modules/navbar";
 import "./modules/sticky-scroll";
 import "./modules/accordion";
-import "./modules/slider-next";
 import "./modules/counter";
 import "slick-carousel";
 import "./modules/slick-config/product-slider";

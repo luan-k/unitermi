@@ -5,7 +5,7 @@
     <section class="slider-custom mb-12 md:mb-24 pt-0 md:pt-48" id="slider-custom" data-anime="slow-slider">
         <?php echo do_shortcode('[ssslider id="5"]') ?>
     </section>
-	<div class="px-12 md:container grid grid-cols-1 md:grid-cols-4 gap-6 mb-20 md:mb-24">
+	<div class="px-12 md:container grid grid-cols-1 md:grid-cols-4 gap-6 mb-20 md:mb-24 font-extrabold">
 		<div class="counter-card border-2 border-gray-100 py-4 px-5 rounded-xl">
 			<h4 class=" text-3xl font-semibold font-montserrat text-center text-unitermi-primary-redDark ">
 				Mais de
