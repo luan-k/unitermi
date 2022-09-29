@@ -24,7 +24,7 @@
 			</h4>
 			<div class="counter-inner-wraper grid grid-cols-1 md:grid-cols-3 mb-6 ">
 				<div>
-					<img class="w-full h-auto" src="<?php echo get_theme_file_uri('./assets/images/svg/counter-truck.svg')?>"  alt="">
+					<img class="w-full h-auto" src="<?php echo get_theme_file_uri('./assets/images/svg/counter-truck-n.svg')?>"  alt="">
 				</div>
 				<h2 class="timer count-title count-number counter col-span-2 text-7xl text-unitermi-primary-redDark ml-2" data-to="7000" data-speed="1500"></h2>
 			</div>

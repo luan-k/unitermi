@@ -4440,6 +4440,25 @@ nav.woocommerce-pagination{
   min-height:15rem
 }
 
+@media(max-width: 1280px){
+  .products-banner-carousel-card__body{
+    padding:2rem .1rem
+  }
+}
+
+@media(max-width: 1024px){
+  .products-banner-carousel-card__body{
+    padding:2rem .1rem
+  }
+
+  .products-banner-carousel-card__body .btn-input{
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 1rem;
+    line-height: 1.5rem
+  }
+}
+
 .logo-wraper{
   width:18rem;
   padding:1.5rem 0
@@ -5282,6 +5301,12 @@ section#slider-custom>div>div.caroufredsel_wrapper>ul.super-simple-slider>li.sli
 
 .counter-card:hover{
   box-shadow:0px 0px 45px -4px rgba(0,0,0,.21)
+}
+
+@media(max-width: 1280px){
+  .counter{
+    font-size:3rem
+  }
 }
 
 @media(max-width: 700px){

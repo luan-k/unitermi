@@ -28,7 +28,7 @@
 
 				<ul data-anime="left" class=" text-4xl mt-12">
                     <li>
-						Siganos: <a target="_blank" href="https://www.instagram.com/unitermi/" class="py-5 px-3 text-black"><i class="text-black fab fa-instagram"></i></i></a>
+						Siga-nos: <a target="_blank" href="https://www.instagram.com/unitermi/" class="py-5 px-3 text-black"><i class="text-black fab fa-instagram"></i></i></a>
 					</li>
                 </ul>
             </div>
