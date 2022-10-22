@@ -6,7 +6,7 @@
 		<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
 			<?php echo wp_trim_words( get_the_title(), 5);  ?>
 		</h3>
-		<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg">
+		<div class="btn-input w-full items-center justify-center mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg">
 			Onde Comprar
 		</div>
 	</div>

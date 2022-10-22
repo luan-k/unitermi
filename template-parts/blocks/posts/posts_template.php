@@ -73,7 +73,7 @@
 								} ?>
 							</div>
 							<div class="ml-9 products-banner-carousel__btn inline relative">
-								<a href class="btn-nav items-center justify-center rounded-2xl py-6 px-6 w-full text-center border-2 border-unitermi-primary-redDark text-unitermi-primary-redDark font-josefin-sans font-bold text-lg">
+								<a href class="btn-nav items-center justify-center py-6 px-6 w-full text-center border-2 border-unitermi-primary-redDark text-unitermi-primary-redDark font-josefin-sans font-bold text-lg">
 									VER TODOS
 								</a>
 							</div>

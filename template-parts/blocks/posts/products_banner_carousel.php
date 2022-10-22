@@ -15,6 +15,8 @@ if ( isset( $block ) ) {
 $title        = get_field( 'products_banner_carousel_title' );
 $font         = get_field( 'products_banner_carousel_font' );
 $img          = get_field( 'products_banner_carousel_img' );
+$img2         = get_field( 'products_banner_carousel_img_2' );
+$img3         = get_field( 'products_banner_carousel_img_3' );
 $link_text    = get_field( 'products_banner_carousel_link_text' );
 $posts        = get_field( 'products_banner_carousel_posts' );
 $posts_manual = get_field( 'products_banner_select_posts' );
@@ -45,7 +47,18 @@ if ( ! $secondary || empty( $secondary ) ) {
 };
  */
 if ( $title || $img || $posts) :
+	$img_array = array($img['sizes']['heroBannerImage'], $img2['sizes']['heroBannerImage'], $img3['sizes']['heroBannerImage']);
+	$img_array_filter = array_filter($img_array);
+	$array_counted = count($img_array_filter);
+	while(!empty($img_array_filter)){
+		$key = rand(0, $array_counted);
+		if(key_exists($key, $img_array_filter)){
+			$new_order[] = $img_array_filter[$key];
+		}
+		unset($img_array_filter[$key]);
+	}
 	?>
+
 		<section class="products-banner-carousel mb-12 md:mb-36 " >
 			<div class="products-banner-carousel__hero">
 				<?php if($img){ ?>
@@ -69,7 +82,7 @@ if ( $title || $img || $posts) :
 								<?php echo esc_html($title) ?>
 							</h2>
 						<?php } ?>
-						<img src="<?php echo $img['sizes']['heroBannerImage'] ?>" alt="" srcset="">
+						<img src="<?php echo $new_order[0] ?>" alt="" srcset="">
 					</a>
 				<?php }
 				if($posts_select == 'relational'){ ?>
@@ -97,7 +110,7 @@ if ( $title || $img || $posts) :
 												<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
 													<?php echo wp_trim_words( $post_title, 5);  ?>
 												</h3>
-												<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
+												<div class="btn-input w-full items-center justify-center mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
 													Onde Comprar
 												</div>
 											</div>
@@ -138,7 +151,7 @@ if ( $title || $img || $posts) :
 												<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
 													<?php echo wp_trim_words( $post_title, 5);  ?>
 												</h3>
-												<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
+												<div class="btn-input w-full items-center justify-center mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
 													Onde Comprar
 												</div>
 											</div>
@@ -146,8 +159,8 @@ if ( $title || $img || $posts) :
 										<?php
 									} ?>
 								</div>
-								<div class="ml-9 products-banner-carousel__btn relative hidden md:inline"  data-anime="right">
-									<a href="<?php $terms = get_the_terms( $posts_manual[0]->ID, 'product_cat' ); foreach ($terms as $term) { $product_cat_id = $term->term_id; $link = get_term_link( (int)$product_cat_id, 'product_cat' ); echo $link; break; } ?>" class="btn-banner items-center justify-center rounded-2xl py-6 px-6 w-full text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg">
+								<div class="ml-9 products-banner-carousel__btn relative hidden md:inline my-auto"  data-anime="right">
+									<a href="<?php $terms = get_the_terms( $posts_manual[0]->ID, 'product_cat' ); foreach ($terms as $term) { $product_cat_id = $term->term_id; $link = get_term_link( (int)$product_cat_id, 'product_cat' ); echo $link; break; } ?>" class="btn-input items-center justify-center py-6 px-6 w-full text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg">
 										VER TODOS
 									</a>
 								</div>
@@ -160,6 +173,7 @@ if ( $title || $img || $posts) :
 					?>
 					<div class="products-banner-carousel__products">
 						<?php
+
 						$args = array(
 							'post_type'      => 'product',
 							'post_status'    => 'publish',
@@ -190,7 +204,7 @@ if ( $title || $img || $posts) :
 													<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
 														<?php echo wp_trim_words( get_the_title(), 5);  ?>
 													</h3>
-													<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
+													<div class="btn-input w-full items-center justify-center mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
 														Onde Comprar
 													</div>
 												</div>
@@ -226,7 +240,7 @@ if ( $title || $img || $posts) :
 													<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
 														<?php echo wp_trim_words( get_the_title(), 5);  ?>
 													</h3>
-													<div class="btn-input w-full items-center justify-center rounded-2xl mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
+													<div class="btn-input w-full items-center justify-center mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
 														Onde Comprar
 													</div>
 												</div>
@@ -236,7 +250,7 @@ if ( $title || $img || $posts) :
 										} ?>
 									</div>
 									<div class="ml-9 products-banner-carousel__btn hidden md:inline relative" data-anime="right">
-										<a href="<?php echo esc_url(site_url() . '/product-category/' . $posts[0]->slug); ?>" class="btn-banner items-center justify-center rounded-2xl py-6 px-6 w-full text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg">
+										<a href="<?php echo esc_url(site_url() . '/product-category/' . $posts[0]->slug); ?>" class="btn-input items-center justify-center py-6 px-6 w-full text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg">
 											VER TODOS
 										</a>
 									</div>

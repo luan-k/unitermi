@@ -1,5 +1,5 @@
 .logo-wraper {
-	width: 18rem;
+	width: 12rem;
 	padding: 1.5rem 0;
 }
 .icon-nav > a {
@@ -7,12 +7,21 @@
 }
 .icon-nav > a > * {
   transition: all 0.3s;
+	font-size: 1.5rem;
 }
 .icon-nav > a:hover {
   color: var(--lightPrimary);
 }
 .icon-nav > a:hover > * {
   color: var(--lightPrimary);
+}
+
+.menu-item a{
+	font-size: 1.5rem;
+}
+
+i.fa-search{
+	font-size: 1.5rem;
 }
 
 nav ul li a {
@@ -23,7 +32,7 @@ nav ul li a {
 
 /* Start Navbar */
 nav ul > li {
-  padding: 1.5rem 2.7rem;
+  padding: 1rem 2.7rem;
   display: inline-block;
   transition: all 0.3s ease;
   margin-left: -5px;
@@ -233,7 +242,7 @@ nav :nth-child(2) {
 } */
 
 li.menu-item{
-	@apply btn-nav;
+	@apply btn-nav-up;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -244,6 +253,9 @@ li.menu-item{
 	&:hover a {
 		@apply text-white;
 	}
+}
+li.menu-item-has-children{
+	@apply btn-nav;
 }
 
 .hamb {
@@ -299,7 +311,7 @@ li.menu-item{
 
 .nav-menu-session {
   background: #f3f4f6;
-  min-height: 52.5px;
+  min-height: 4rem;
 }
 
 .nav-menu-list {

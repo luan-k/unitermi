@@ -4,9 +4,53 @@ if ( !defined( 'ABSPATH' ) ) {
 }
 
 if ( $related_products ) :
+
+	$cores = get_the_terms( get_the_ID() , 'product_cat' );
+
+	$categorias = get_the_terms( get_the_ID() , 'litragem' );
+
+	$args = array(
+		'post_type'      => 'product',
+		'post_status'    => 'publish',
+		'posts_per_page' => 4,
+		'post__not_in' => array(get_the_ID()),
+		'tax_query'      => array(
+			'relation' => 'AND',
+			array(
+				'taxonomy' => 'litragem',
+				'field'    => 'slug',
+				'terms'    => $categorias[0]->slug,
+			),
+			array(
+				'taxonomy' => 'product_cat',
+				'field'    => 'slug',
+				'terms'    => $cores[0]->slug,
+			),
+		));
+	$query = new \WP_Query( $args );
+/* 	var_dump($query); */
+
 	?>
 
 	<section class="related products">
+
+		<section class="outras-cores">
+			<div class=""> <?php
+					if ( $query->have_posts() ) {?>
+							<?php ?>
+								<h3 class="text-3xl mb-6 mt-12">Outras cores</h3>
+								<div class="grid grid-cols-1 md:grid-cols-4 md:col-span-4 gap-16" data-anime="bottom">
+									 <?php
+									while ( $query->have_posts() ) {
+										$query->the_post();
+										 wc_get_template_part('template-parts/blocks/content', 'card-products');
+									} ?>
+								</div>
+							<?php  ?>
+					<?php } ?>
+			</div>
+		</section>
+		<?php wp_reset_postdata(); ?>
 
 		<?php
 		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'woocommerce' ) );
@@ -48,7 +92,6 @@ if ( $related_products ) :
 		<?php } ?>
 
 		<?php woocommerce_product_loop_end(); ?>
-
 	</section>
 	<?php
 endif;

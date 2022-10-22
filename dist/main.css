@@ -845,6 +845,11 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.my-auto{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .mt-0{
   margin-top: 0px;
 }
@@ -1077,6 +1082,10 @@ video {
   height: 14rem;
 }
 
+.h-72{
+  height: 18rem;
+}
+
 .h-auto{
   height: auto;
 }
@@ -1111,6 +1120,10 @@ video {
 
 .w-16{
   width: 4rem;
+}
+
+.w-72{
+  width: 18rem;
 }
 
 .w-1\/2{
@@ -1413,6 +1426,10 @@ video {
 
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-cols-4{
@@ -2423,9 +2440,9 @@ video {
   padding-bottom: 6rem;
 }
 
-.py-60{
-  padding-top: 15rem;
-  padding-bottom: 15rem;
+.py-32{
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 .pt-0{
@@ -2482,6 +2499,10 @@ video {
 
 .pr-9{
   padding-right: 2.25rem;
+}
+
+.pr-52{
+  padding-right: 13rem;
 }
 
 .pb-3{
@@ -3981,6 +4002,58 @@ section.marcas{
   max-height:400%
 }
 
+.btn-nav-up{
+  position:relative;
+  overflow:hidden;
+  background:transparent;
+  text-transform:uppercase;
+  transition:all .33s;
+  z-index:1
+}
+
+.btn-nav-up:before,.btn-nav-up:after{
+  position:absolute;
+  content:"";
+  width:100%;
+  height:100%;
+  top:0;
+  left:-100%;
+  z-index:-1;
+  transition:all .35s
+}
+
+.btn-nav-up:before, .btn-nav-up:after{
+  --tw-bg-opacity: 1;
+  background-color: rgba(165, 26, 29, var(--tw-bg-opacity));
+}
+
+.btn-nav-up.current-menu-item:before, .btn-nav-up.current-menu-item:after{
+  --tw-bg-opacity: 1;
+  background-color: rgba(165, 26, 29, var(--tw-bg-opacity));
+}
+
+.btn-nav-up:before{
+  opacity:.5
+}
+
+.btn-nav-up:after{
+  transition-delay:.2s
+}
+
+.btn-nav-up:hover{
+  color:#fff;
+  background-color:#a51a1d
+}
+
+.btn-nav-up.btn-nav-up.current-menu-item:hover{
+  --tw-text-opacity: 1;
+  color: rgba(165, 26, 29, var(--tw-text-opacity))
+}
+
+.btn-nav-up:hover:before,.btn-nav-up:hover:after{
+  left:0
+}
+
 .btn-banner{
   position:relative;
   overflow:hidden;
@@ -4460,7 +4533,7 @@ nav.woocommerce-pagination{
 }
 
 .logo-wraper{
-  width:18rem;
+  width:12rem;
   padding:1.5rem 0
 }
 
@@ -4469,7 +4542,8 @@ nav.woocommerce-pagination{
 }
 
 .icon-nav>a>*{
-  transition:all .3s
+  transition:all .3s;
+  font-size:1.5rem
 }
 
 .icon-nav>a:hover{
@@ -4480,13 +4554,21 @@ nav.woocommerce-pagination{
   color:var(--lightPrimary)
 }
 
+.menu-item a{
+  font-size:1.5rem
+}
+
+i.fa-search{
+  font-size:1.5rem
+}
+
 nav ul li a{
   color:#fff;
   text-decoration:none
 }
 
 nav ul>li{
-  padding:1.5rem 2.7rem;
+  padding:1rem 2.7rem;
   display:inline-block;
   transition:all .3s ease;
   margin-left:-5px
@@ -4700,9 +4782,8 @@ li.menu-item:before,li.menu-item:after{
   content:"";
   width:100%;
   height:100%;
-  max-height:0;
   top:0;
-  left:0;
+  left:-100%;
   z-index:-1;
   transition:all .35s
 }
@@ -4712,19 +4793,18 @@ li.menu-item:before, li.menu-item:after{
   background-color: rgba(165, 26, 29, var(--tw-bg-opacity));
 }
 
-.btn-nav:before,.btn-nav:after{
+.btn-nav-up:before,.btn-nav-up:after{
   position:absolute;
   content:"";
   width:100%;
   height:100%;
-  max-height:0;
   top:0;
-  left:0;
+  left:-100%;
   z-index:-1;
   transition:all .35s
 }
 
-.btn-nav:before, .btn-nav:after{
+.btn-nav-up:before, .btn-nav-up:after{
   --tw-bg-opacity: 1;
   background-color: rgba(165, 26, 29, var(--tw-bg-opacity));
 }
@@ -4734,7 +4814,7 @@ li.menu-item.current-menu-item:before, li.menu-item.current-menu-item:after{
   background-color: rgba(165, 26, 29, var(--tw-bg-opacity));
 }
 
-.btn-nav.current-menu-item:before, .btn-nav.current-menu-item:after{
+.btn-nav-up.current-menu-item:before, .btn-nav-up.current-menu-item:after{
   --tw-bg-opacity: 1;
   background-color: rgba(165, 26, 29, var(--tw-bg-opacity));
 }
@@ -4752,22 +4832,22 @@ li.menu-item:hover{
   background-color:#a51a1d
 }
 
-li.menu-item.btn-nav.current-menu-item:hover{
+li.menu-item.btn-nav-up.current-menu-item:hover{
   --tw-text-opacity: 1;
   color: rgba(165, 26, 29, var(--tw-text-opacity))
 }
 
-.btn-navli.menu-item.current-menu-item:hover{
+.btn-nav-upli.menu-item.current-menu-item:hover{
   --tw-text-opacity: 1;
   color: rgba(165, 26, 29, var(--tw-text-opacity))
 }
 
 li.menu-item:hover:before,li.menu-item:hover:after{
-  max-height:400%
+  left:0
 }
 
-.btn-nav:hover:before,.btn-nav:hover:after{
-  max-height:400%
+.btn-nav-up:hover:before,.btn-nav-up:hover:after{
+  left:0
 }
 
 li.menu-item{
@@ -4805,6 +4885,90 @@ li.menu-item a{
 li.menu-item:hover a{
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity))
+}
+
+li.menu-item-has-children{
+  position:relative;
+  overflow:hidden;
+  background:transparent;
+  text-transform:uppercase;
+  transition:all .33s;
+  z-index:1
+}
+
+li.menu-item-has-children:before,li.menu-item-has-children:after{
+  position:absolute;
+  content:"";
+  width:100%;
+  height:100%;
+  max-height:0;
+  top:0;
+  left:0;
+  z-index:-1;
+  transition:all .35s
+}
+
+li.menu-item-has-children:before, li.menu-item-has-children:after{
+  --tw-bg-opacity: 1;
+  background-color: rgba(165, 26, 29, var(--tw-bg-opacity));
+}
+
+.btn-nav:before,.btn-nav:after{
+  position:absolute;
+  content:"";
+  width:100%;
+  height:100%;
+  max-height:0;
+  top:0;
+  left:0;
+  z-index:-1;
+  transition:all .35s
+}
+
+.btn-nav:before, .btn-nav:after{
+  --tw-bg-opacity: 1;
+  background-color: rgba(165, 26, 29, var(--tw-bg-opacity));
+}
+
+li.menu-item-has-children.current-menu-item:before, li.menu-item-has-children.current-menu-item:after{
+  --tw-bg-opacity: 1;
+  background-color: rgba(165, 26, 29, var(--tw-bg-opacity));
+}
+
+.btn-nav.current-menu-item:before, .btn-nav.current-menu-item:after{
+  --tw-bg-opacity: 1;
+  background-color: rgba(165, 26, 29, var(--tw-bg-opacity));
+}
+
+li.menu-item-has-children:before{
+  opacity:.5
+}
+
+li.menu-item-has-children:after{
+  transition-delay:.2s
+}
+
+li.menu-item-has-children:hover{
+  color:#fff;
+  background-color:#a51a1d
+}
+
+li.menu-item-has-children.btn-nav.current-menu-item:hover{
+  --tw-text-opacity: 1;
+  color: rgba(165, 26, 29, var(--tw-text-opacity))
+}
+
+.btn-navli.menu-item-has-children.current-menu-item:hover{
+  --tw-text-opacity: 1;
+  color: rgba(165, 26, 29, var(--tw-text-opacity))
+}
+
+li.menu-item-has-children:hover:before,li.menu-item-has-children:hover:after{
+  max-height:400%
+}
+
+.btn-nav:hover:before,.btn-nav:hover:after{
+  max-height:400%
 }
 
 .hamb{
@@ -4864,7 +5028,7 @@ li.menu-item:hover a{
 
 .nav-menu-session{
   background:#f3f4f6;
-  min-height:52.5px
+  min-height:4rem
 }
 
 .nav-menu-list{
@@ -5227,7 +5391,7 @@ ul.useful-links-bar-nav li a{
 
 section#slider-custom{
   min-width:100%;
-  max-height:96.1rem;
+  max-height:54rem;
   overflow:hidden
 }
 
@@ -5384,7 +5548,7 @@ div.wpforms-container-full .wpforms-form label.wpforms-error{
 }
 
 div.wpforms-container-full .wpforms-form input[type=date],div.wpforms-container-full .wpforms-form input[type=datetime],div.wpforms-container-full .wpforms-form input[type=datetime-local],div.wpforms-container-full .wpforms-form input[type=email],div.wpforms-container-full .wpforms-form input[type=month],div.wpforms-container-full .wpforms-form input[type=number],div.wpforms-container-full .wpforms-form input[type=password],div.wpforms-container-full .wpforms-form input[type=range],div.wpforms-container-full .wpforms-form input[type=search],div.wpforms-container-full .wpforms-form input[type=tel],div.wpforms-container-full .wpforms-form input[type=text],div.wpforms-container-full .wpforms-form input[type=time],div.wpforms-container-full .wpforms-form input[type=url],div.wpforms-container-full .wpforms-form input[type=week],div.wpforms-container-full .wpforms-form select,div.wpforms-container-full .wpforms-form textarea{
-  border-radius:9px !important
+  border-radius:0px !important
 }
 
 .img-contato{
@@ -5493,9 +5657,13 @@ nav.woocommerce-breadcrumb{
   margin-top:-10rem
 }
 
+.pswp__bg{
+  background:#fff !important
+}
+
 .bg-image{
   background-repeat:no-repeat;
-  background-size:cover;
+  background-size:contain;
   background-position:center;
   min-width:100%;
   min-height:25rem;
@@ -5600,6 +5768,10 @@ form.woocommerce-ordering{
   background:#a51a1d;
   color:#fff;
   padding:1.5rem 0
+}
+
+.woocommerce-Tabs-panel--description p{
+  margin-bottom:1rem
 }
 
 @media (min-width: 640px){
@@ -5756,6 +5928,10 @@ form.woocommerce-ordering{
     margin-bottom: 9rem;
   }
 
+  .md\:-mb-24{
+    margin-bottom: -6rem;
+  }
+
   .md\:inline{
     display: inline;
   }
@@ -5801,8 +5977,8 @@ form.woocommerce-ordering{
     padding-right: 7rem;
   }
 
-  .md\:pt-48{
-    padding-top: 12rem;
+  .md\:pt-40{
+    padding-top: 10rem;
   }
 
   .md\:pr-12{

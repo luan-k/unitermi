@@ -26,9 +26,9 @@
                     <li> <a target="_blank" href="tel:4832869093"> <i class="text-black fas fa-phone-alt mr-3" aria-hidden="true"></i> (48) 3286-9093 </a> </li>
                 </ul>
 
-				<ul data-anime="left" class=" text-4xl mt-12">
+				<ul data-anime="left" class=" text-4xl mt-12"><!-- instagram-logo.png -->
                     <li>
-						Siga-nos: <a target="_blank" href="https://www.instagram.com/unitermi/" class="py-5 px-3 text-black"><i class="text-black fab fa-instagram"></i></i></a>
+						Siga-nos: <a target="_blank" href="https://www.instagram.com/unitermi/" class="py-5 px-3 text-black"> <img class="inline w-12" src="<?php echo get_theme_file_uri('./assets/images/instagram.png')?>" alt=""></a>
 					</li>
                 </ul>
             </div>

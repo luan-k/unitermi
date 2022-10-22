@@ -43,10 +43,10 @@
                                 <a class="footer-text" href="<?php echo esc_url(site_url('/produtos')); ?>">Produtos</a>
                             </div>
                             <div class="footer-text">
-                                <a class="footer-text" target="_blank" href="<?php echo esc_url(site_url('/wp-content/uploads/2022/09/Catalogo-reduzido.pdf')); ?>"> Catálogo </a>
-                            </div>
-                            <div class="footer-text">
                                 <a class="footer-text" href="<?php echo esc_url(site_url('/quem-somos')); ?>"> Quem Somos </a>
+                            </div>
+							<div class="footer-text">
+                                <a class="footer-text" target="_blank" href="<?php echo esc_url(site_url('/wp-content/uploads/2022/09/Catalogo-reduzido.pdf')); ?>"> Catálogo </a>
                             </div>
                             <div class="footer-text">
                                 <a class="footer-text" href="<?php echo esc_url(site_url('/contato')); ?>">Contato</a>
