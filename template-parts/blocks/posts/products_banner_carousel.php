@@ -249,7 +249,7 @@ if ( $title || $img || $posts) :
 											<?php
 										} ?>
 									</div>
-									<div class="ml-9 products-banner-carousel__btn hidden md:inline relative" data-anime="right">
+									<div class="ml-9 products-banner-carousel__btn hidden md:inline relative my-auto" data-anime="right">
 										<a href="<?php echo esc_url(site_url() . '/product-category/' . $posts[0]->slug); ?>" class="btn-input items-center justify-center py-6 px-6 w-full text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg">
 											VER TODOS
 										</a>

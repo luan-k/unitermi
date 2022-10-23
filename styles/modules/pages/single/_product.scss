@@ -63,8 +63,10 @@ nav.woocommerce-breadcrumb{
 	gap: 1rem;
 }
 
-.shop-loop-custom{
-	margin-top: -10rem;
+@media(min-width:769px){
+	.shop-loop-custom{
+		margin-top: -10rem;
+	}
 }
 .pswp__bg {
 	background: #fff!important;
