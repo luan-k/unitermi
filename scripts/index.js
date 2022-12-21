@@ -12,24 +12,16 @@ import Search from "./modules/Search";
 
 var search = new Search();
 
-$(function() {
-	$('.toggler').on('click', function() {
-		$('nav.nav-menu').slideToggle(500);
-  });
+$(function () {
+	$(".toggler").on("click", function () {
+		$("nav.nav-menu").slideToggle(500);
+	});
 });
-
-/* $(function() {
-	let links = $('.woocommerce-breadcrumb > a');
-	for( let i = 0; i < links.length; i++){
-		links[i].removeAttribute("href");
-	}
-});
- */
 
 let resetAllText = document.getElementsByClassName("wpc-filter-chip-name")[0];
-if(resetAllText.innerHTML == "Reset all"){
-	resetAllText.innerHTML = "Limpar filtros"
-}else{
-	console.log('no')
+if (resetAllText.innerHTML == "Reset all") {
+	resetAllText.innerHTML = "Limpar filtros";
+} else {
+	console.log("no");
 }
 console.log(resetAllText);
