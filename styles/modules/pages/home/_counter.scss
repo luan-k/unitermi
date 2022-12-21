@@ -1,25 +1,24 @@
 .counter {
 	display: flex;
-    align-items: flex-end;
+	align-items: flex-end;
 	justify-content: flex-start;
 	cursor: default;
-	&-card{
+	&-card {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		flex-direction: column;
 		align-content: center;
 		transition: all 0.3s;
-		&:hover{
-			-webkit-box-shadow: 0px 0px 45px -4px rgba(0,0,0,0.21);
-			-moz-box-shadow: 0px 0px 45px -4px rgba(0,0,0,0.21);
-			box-shadow: 0px 0px 45px -4px rgba(0,0,0,0.21);
+		&:hover {
+			-webkit-box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.21);
+			-moz-box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.21);
+			box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.21);
 		}
-		&--rocket{
-
+		&--rocket {
 		}
 	}
-	&__brasil--titulo{
+	&__brasil--titulo {
 		font-size: 3rem;
 		display: flex;
 		align-items: flex-start;
@@ -27,42 +26,42 @@
 		cursor: default;
 		flex-direction: column;
 	}
-	&__main-title{
+	&__main-title {
 		font-size: 1.5rem;
 	}
-	&__subtitle{
+	&__subtitle {
 		font-size: 1.4rem;
 	}
-	&__bandeira-img{
+	&__bandeira-img {
 		max-width: 50%;
-    	margin: auto;
+		margin: auto;
 	}
-	&__temp-img{
+	&__temp-img {
 		max-width: 36%;
 		margin: auto;
 	}
-	&__number{
+	&__number {
 		font-size: 4.2rem;
 		line-height: 4.2rem;
-		&--rocket{
+		&--rocket {
 			font-size: 7rem;
 			line-height: 7rem;
 		}
 	}
 }
 
-@media (max-width:1280px){
+@media (max-width: 1280px) {
 	.counter {
 		font-size: 3rem;
 	}
 }
 
-@media (max-width:700px){
+@media (max-width: 700px) {
 	.counter {
 		display: flex;
 		align-items: flex-end;
 		justify-content: flex-start;
-		&-card{
+		&-card {
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -70,25 +69,86 @@
 			align-content: center;
 			transition: all 0.3s;
 			margin: 0.5rem 3rem;
-			&:hover{
-				-webkit-box-shadow: 0px 0px 45px -4px rgba(0,0,0,0.21);
-				-moz-box-shadow: 0px 0px 45px -4px rgba(0,0,0,0.21);
-				box-shadow: 0px 0px 45px -4px rgba(0,0,0,0.21);
+			&:hover {
+				-webkit-box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.21);
+				-moz-box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.21);
+				box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.21);
 			}
 		}
-		&-inner-wraper{
+		&-inner-wraper {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			& h2{
+			& h2 {
 				text-align: center;
 			}
 		}
-		&__img{
+		&__img {
 			max-width: 39%;
 			margin: auto;
 		}
 	}
-
+}
+@media (min-width: 1685px) {
+	.counter {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+		cursor: default;
+		&-card {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: column;
+			align-content: center;
+			transition: all 0.3s;
+			&:hover {
+				-webkit-box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.21);
+				-moz-box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.21);
+				box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.21);
+			}
+			&--rocket {
+				.counter {
+					align-items: center;
+					span {
+						align-self: flex-end;
+						margin-bottom: 1.6rem;
+						margin-left: 1rem;
+					}
+				}
+			}
+		}
+		&__brasil--titulo {
+			font-size: 4.3rem;
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			cursor: default;
+			flex-direction: column;
+		}
+		&__main-title {
+			font-size: 2.1rem;
+		}
+		&__subtitle {
+			font-size: 1.9rem;
+		}
+		&__bandeira-img {
+			max-width: 50%;
+			margin: auto;
+		}
+		&__temp-img {
+			max-width: 36%;
+			margin: auto;
+		}
+		&__number {
+			font-size: 6.7rem;
+			line-height: 6.7rem;
+			padding-left: 1rem;
+			&--rocket {
+				font-size: 7rem;
+				line-height: 7rem;
+			}
+		}
+	}
 }

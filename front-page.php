@@ -26,14 +26,14 @@
 			</h4>
 			<div class="counter-inner-wraper grid grid-cols-1 md:grid-cols-3">
 				<div class="col-span-3">
-					<img class="w-full h-auto counter__temp-img justify-center" src="<?php echo get_theme_file_uri('./assets/images/svg/counter-temp.svg')?>"  alt="">
+					<img class="w-full h-auto counter__temp-img" src="<?php echo get_theme_file_uri('./assets/images/svg/counter-temp.svg')?>"  alt="">
 				</div>
 			</div>
 			<h4 class="counter__subtitle font-bold font-montserrat text-center text-unitermi-primary-redDark ">em produtos termicos</h4>
 		</div>
 		<div class="counter-card border-2 border-gray-100 py-4 px-5">
 			<h4 class="counter__main-title font-bold font-montserrat text-center text-unitermi-primary-redDark ">
-				Mais de
+				com mais de
 			</h4>
 			<div class="counter-inner-wraper grid grid-cols-1 md:grid-cols-3">
 				<div>
@@ -62,8 +62,8 @@
 					<img class="w-full h-auto counter__img" src="<?php echo get_theme_file_uri('./assets/images/svg/counter-brazil.svg')?>"  alt="">
 				</div>
 				<h2 class="counter col-span-2 text-unitermi-primary-redDark ml-2 counter__brasil--titulo">
-					<span class="text-2xl inline">em todo o</span>
-					<span class="font-black">BRASIL</span>
+					<span class="text-4xl inline 2xl:-mb-3">em todo o</span>
+					<span class="font-black 2xl:-mt-4">BRASIL</span>
 				</h2>
 			</div>
 			<h4 class="text-3xl font-bold font-montserrat text-center text-unitermi-primary-redDark "></h4>
