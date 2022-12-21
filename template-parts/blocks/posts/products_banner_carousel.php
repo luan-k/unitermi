@@ -17,6 +17,9 @@ $font         = get_field( 'products_banner_carousel_font' );
 $img          = get_field( 'products_banner_carousel_img' );
 $img2         = get_field( 'products_banner_carousel_img_2' );
 $img3         = get_field( 'products_banner_carousel_img_3' );
+$img_mob      = get_field( 'products_banner_carousel_img_mob' );
+$img_mob2     = get_field( 'products_banner_carousel_img_mob_2' );
+$img_mob3     = get_field( 'products_banner_carousel_img_mob_3' );
 $link_text    = get_field( 'products_banner_carousel_link_text' );
 $posts        = get_field( 'products_banner_carousel_posts' );
 $posts_manual = get_field( 'products_banner_select_posts' );
@@ -57,6 +60,16 @@ if ( $title || $img || $posts) :
 		}
 		unset($img_array_filter[$key]);
 	}
+	$img_mob_array = array($img_mob['sizes']['heroBannerImageMob'], $img_mob2['sizes']['heroBannerImageMob'], $img_mob3['sizes']['heroBannerImageMob']);
+	$img_mob_array_filter = array_filter($img_mob_array);
+	$array_mob_counted = count($img_mob_array_filter);
+	while(!empty($img_mob_array_filter)){
+		$key = rand(0, $array_mob_counted);
+		if(key_exists($key, $img_mob_array_filter)){
+			$new_order_mob[] = $img_mob_array_filter[$key];
+		}
+		unset($img_mob_array_filter[$key]);
+	}
 	?>
 
 		<section class="products-banner-carousel mb-12 md:mb-36 " >
@@ -82,7 +95,11 @@ if ( $title || $img || $posts) :
 								<?php echo esc_html($title) ?>
 							</h2>
 						<?php } ?>
-						<img src="<?php echo $new_order[0] ?>" alt="" srcset="">
+						<?php if( wp_is_mobile()){ ?>
+							<img src="<?php echo $new_order_mob[0] ?>" class="mob" alt="" srcset="">
+						<?php }else{ ?>
+							<img src="<?php echo $new_order[0] ?>" alt="" srcset="">
+						<?php } ?>
 					</a>
 				<?php }
 				if($posts_select == 'relational'){ ?>
@@ -102,7 +119,7 @@ if ( $title || $img || $posts) :
 										$link       	 = get_the_permalink( $posts_manual[$i] );
 										$post_content    = $posts_manual[$i]->post_content;
 										?>
-										<a href="<?php echo $link; ?>" class="products-banner-carousel-card underline-hover rounded-md relative">
+										<a href="<?php echo $link; ?>" class="products-banner-carousel-card underline-hover   relative">
 											<div class="products-banner-carousel-card__img-wrapper">
 												<img class="products-banner-carousel-card__img-wrapper--img" src="<?php echo $post_image; ?>" alt="imagem produto">
 											</div>
@@ -143,7 +160,7 @@ if ( $title || $img || $posts) :
 										$link       	 = get_the_permalink( $posts_manual[$i] );
 										$post_content    = $posts_manual[$i]->post_content;
 										?>
-										<a href="<?php echo $link; ?>" class="products-banner-carousel-card underline-hover rounded-md relative">
+										<a href="<?php echo $link; ?>" class="products-banner-carousel-card underline-hover   relative">
 											<div class="products-banner-carousel-card__img-wrapper">
 												<img class="products-banner-carousel-card__img-wrapper--img" src="<?php echo $post_image; ?>" alt="imagem produto">
 											</div>
@@ -196,7 +213,7 @@ if ( $title || $img || $posts) :
 
 											?>
 
-											<a href="<?php the_permalink(); ?>" class="products-banner-carousel-card underline-hover rounded-md relative">
+											<a href="<?php the_permalink(); ?>" class="products-banner-carousel-card underline-hover   relative">
 												<div class="products-banner-carousel-card__img-wrapper">
 													<img class="products-banner-carousel-card__img-wrapper--img" src="<?php echo get_the_post_thumbnail_url( get_the_ID()) ?>" alt="imagem produto">
 												</div>
@@ -232,7 +249,7 @@ if ( $title || $img || $posts) :
 
 											?>
 
-											<a href="<?php the_permalink(); ?>" class="products-banner-carousel-card underline-hover rounded-md relative">
+											<a href="<?php the_permalink(); ?>" class="products-banner-carousel-card underline-hover   relative">
 												<div class="products-banner-carousel-card__img-wrapper">
 													<img class="products-banner-carousel-card__img-wrapper--img" src="<?php echo get_the_post_thumbnail_url( get_the_ID()) ?>" alt="imagem produto">
 												</div>

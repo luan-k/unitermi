@@ -33,7 +33,7 @@
                 </ul>
             </div>
             <div class="col-sm-6 mt-9 md:mt-0" data-anime="right">
-                <?php echo do_shortcode('[wpforms id="222" title="false" description="false"]') ?>
+               <!--  <?php echo do_shortcode('[wpforms id="222" title="false" description="false"]') ?> -->
             </div>
         </div>
     </div>

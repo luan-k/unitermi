@@ -25,3 +25,11 @@ $(function() {
 	}
 });
  */
+
+let resetAllText = document.getElementsByClassName("wpc-filter-chip-name")[0];
+if(resetAllText.innerHTML == "Reset all"){
+	resetAllText.innerHTML = "Limpar filtros"
+}else{
+	console.log('no')
+}
+console.log(resetAllText);

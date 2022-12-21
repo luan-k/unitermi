@@ -15,11 +15,19 @@
                     <div class="flex justify-center md:justify-between logo-nav-inner">
 
                         <!-- logo -->
-                        <div class="logo-wraper">
-                            <a class="" href="<?php echo esc_url(site_url()); ?>">
-                                <img class="logo" src="<?php echo get_theme_file_uri('./assets/images/svg/unitermi_logo.svg')?>" alt="">
-                            </a>
-                        </div>
+						<?php if( wp_is_mobile()){ ?>
+							<div class="logo-wraper-mob">
+								<a class="" href="<?php echo esc_url(site_url()); ?>">
+									<img class="logo" src="<?php echo get_theme_file_uri('./assets/images/svg/unitermi_logo.svg')?>" alt="">
+								</a>
+							</div>
+						<?php }else{ ?>
+							<div class="logo-wraper">
+								<a class="" href="<?php echo esc_url(site_url()); ?>">
+									<img class="logo" src="<?php echo get_theme_file_uri('./assets/images/svg/logo-slogan-1.svg')?>" alt="">
+								</a>
+							</div>
+						<?php } ?>
 
                         <!-- primary nav -->
                         <div class="icon-nav hidden md:flex items-center text-2xl space-x-4">

@@ -30,7 +30,7 @@
 									$product = wc_get_product( get_the_ID() );
 									?>
 
-									<a href="<?php the_permalink(); ?>" class="products-banner-carousel-card underline-hover rounded-md relative">
+									<a href="<?php the_permalink(); ?>" class="products-banner-carousel-card underline-hover   relative">
 										<div class="products-banner-carousel-card__img-wrapper">
 											<img class="products-banner-carousel-card__img-wrapper--img" src="<?php the_post_thumbnail_url() ?>" alt="imagem produto">
 										</div>

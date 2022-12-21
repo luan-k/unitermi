@@ -29,7 +29,7 @@ get_header( 'shop' );?>
 			 */
 			//do_action( 'woocommerce_sidebar' );?>
 		</div> -->
-		<div class="col-span-1 lg:col-span-9 order-1 md:order-2 mt-36">
+		<div class="col-span-1 lg:col-span-9 order-1 md:order-2 mt-6">
 			<?php
 			/**
 			* Hook: woocommerce_before_main_content.
@@ -219,7 +219,7 @@ get_header( 'shop' );?>
 						do_action( 'woocommerce_shop_loop' );
 
 
-						wc_get_template_part('template-parts/blocks/content', 'card-products');
+						wc_get_template_part('template-parts/blocks/content', 'card-products-no-btn');
 					}
 				}?>
 				</div>

@@ -15,6 +15,9 @@ function wkode_files(){
 	if (is_front_page()){
         wp_enqueue_script('wkode-slider-script', get_theme_file_uri('/dist/sliderScript.js'), NULL, '1.0', true);
     }
+	if (is_shop()){
+        wp_enqueue_script('wkode-hide-pagination-script', get_theme_file_uri('/dist/hidePagination.js'), NULL, '1.0', true);
+    }
 
 }
 
@@ -46,6 +49,7 @@ function wkode_features() {
     add_image_size('ProductImageList', 500, 500, true);
     add_image_size('ProductImageSingle', 800, 1000, true);
     add_image_size('heroBannerImage', 1600, 546, true);
+    add_image_size('heroBannerImageMob', 1080, 1080, true);
     add_image_size('ImageCard', 360, 360, true);
 }
 add_action('after_setup_theme', 'wkode_features');

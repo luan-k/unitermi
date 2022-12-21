@@ -4,11 +4,11 @@
 jQuery(document).ready(function ($) {
   $(document).ready(function () {
     window.addEventListener("load", function () {
-			/* console.log(document.getElementsByTagName("a")); */
-      linkst = document.getElementsByTagName("a")[15];
-      linksn = document.getElementsByTagName("a")[16];
-      linkrd = document.getElementsByTagName("a")[17];
-      linkrth = document.getElementsByTagName("a")[18];
+			console.log(document.getElementsByTagName("a"));
+      linkst = document.getElementsByTagName("a")[16];
+      linksn = document.getElementsByTagName("a")[17];
+      linkrd = document.getElementsByTagName("a")[18];
+      linkrth = document.getElementsByTagName("a")[19];
       nextBtn = document.getElementsByClassName("next half");
       /*  if(linkst.classList.contains("selected")){
                   console.log( "here" );

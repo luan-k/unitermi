@@ -1,4 +1,4 @@
-<a href="<?php the_permalink(); ?>" class="products-banner-carousel-card underline-hover rounded-md relative">
+<a href="<?php the_permalink(); ?>" class="products-banner-carousel-card underline-hover   relative">
 	<div class="products-banner-carousel-card__img-wrapper product-page-img-wrapper">
 		<img class="products-banner-carousel-card__img-wrapper--img"  src="<?php echo get_the_post_thumbnail_url( get_the_ID()) ?>" alt="imagem produto">
 	</div>

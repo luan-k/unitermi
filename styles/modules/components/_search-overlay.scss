@@ -12,7 +12,7 @@
   position: absolute;
   top: 0;
   /*   left: 0; */
-  right: 12%;
+  right: 9.9%;
   /*   bottom: 0; */
 
   visibility: hidden;
@@ -22,7 +22,7 @@
   box-sizing: border-box;
   height: 0;
   min-height: 0rem;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   width: 0;
   padding-bottom: 10%;
   p {
@@ -39,7 +39,7 @@
   }
 
   body.admin-bar & {
-    top: 0.6rem;
+    top: 0;
   }
 
   &__top {
@@ -65,7 +65,7 @@
     visibility: visible;
     opacity: 1;
     transform: scale(1);
-    width: 76%;
+    margin: 0;
   }
 
   &__section-title {
@@ -123,12 +123,12 @@
     padding-bottom: 0;
   }
   & > div {
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
     & #search-overlay__results > div > .row {
       overflow: visible;
       & > a.link-search-results {
         border: white 0.3rem solid;
-        border-radius: 1.3rem;
+        /* border-radius: 1.3rem; */
         margin: 1rem 0;
         min-height: 15rem;
         &.servico {
@@ -144,7 +144,7 @@
         & > .search-product-wraper {
           background-color: var(--greenPrimary);
           color: white;
-          border-radius: 1rem;
+          /* border-radius: 1rem; */
           padding-left: 0;
           transition: all 0.3s;
           height: 100%;
@@ -165,7 +165,7 @@
               justify-content: center;
               align-items: center;
               overflow: hidden;
-              border-radius: 1rem 0 0 1rem;
+              /* border-radius: 1rem 0 0 1rem; */
               & > img {
                 width: 100%;
                 height: auto;
@@ -201,8 +201,9 @@
   width: 75%;
   box-sizing: border-box;
   border: none;
-  padding: 15px 0;
+	padding: 10px 0;
   margin: 0;
+	font-family: montserrat, 'sans-serif';
   background-color: transparent;
   font-size: 1vw;
   font-weight: 300;
@@ -275,4 +276,23 @@
   .search-overlay__top > div {
     height: 100%;
   } */
+}
+
+#search-overlay__results{
+	.products-banner-carousel-card{
+		&__body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&--title{
+				font-size: 1.8rem;
+				text-align: center;
+			}
+		}
+	}
+}
+#search-results-bottom{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

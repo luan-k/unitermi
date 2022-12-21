@@ -22,6 +22,7 @@ const config = {
   entry: {
     main: "./scripts/index.js",
 		sliderScript: "./scripts/modules/slider-next.js",
+		hidePagination: "./scripts/modules/hide-pagination.js",
   },
 
   output: {
@@ -70,7 +71,7 @@ const config = {
 if (process.env.SERVER) {
   config.plugins.push(
     new BrowserSyncPlugin({
-      proxy: "uni-teste.local",
+      proxy: "uni-kill.local",
       files: ["**/*.php", "**/*.css", "**/*.scss"],
       notify: false,
     })

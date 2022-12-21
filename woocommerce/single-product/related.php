@@ -3,54 +3,66 @@ if ( !defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+
 if ( $related_products ) :
 
-	$cores = get_the_terms( get_the_ID() , 'product_cat' );
-
-	$categorias = get_the_terms( get_the_ID() , 'litragem' );
-
-	$args = array(
-		'post_type'      => 'product',
-		'post_status'    => 'publish',
-		'posts_per_page' => 4,
-		'post__not_in' => array(get_the_ID()),
-		'tax_query'      => array(
-			'relation' => 'AND',
-			array(
-				'taxonomy' => 'litragem',
-				'field'    => 'slug',
-				'terms'    => $categorias[0]->slug,
-			),
-			array(
-				'taxonomy' => 'product_cat',
-				'field'    => 'slug',
-				'terms'    => $cores[0]->slug,
-			),
-		));
-	$query = new \WP_Query( $args );
-/* 	var_dump($query); */
-
 	?>
+	<section class="related products mt-12">
+		<div id="promotional_slider">
+			<h3 class="text-4xl mb-12 md:mb-3 mt-12">Outras cores</h3>
+			<div class="promotionalslider_wrapper" data-anime="bottom">
+				<?php
 
-	<section class="related products">
+				$cores = get_the_terms( get_the_ID() , 'product_cat' );
 
-		<section class="outras-cores">
-			<div class=""> <?php
-					if ( $query->have_posts() ) {?>
-							<?php ?>
-								<h3 class="text-3xl mb-6 mt-12">Outras cores</h3>
-								<div class="grid grid-cols-1 md:grid-cols-4 md:col-span-4 gap-16" data-anime="bottom">
-									 <?php
-									while ( $query->have_posts() ) {
-										$query->the_post();
-										 wc_get_template_part('template-parts/blocks/content', 'card-products');
-									} ?>
+				$categorias = get_the_terms( get_the_ID() , 'litragem' );
+
+				$args = array(
+					'post_type'      => 'product',
+					'post_status'    => 'publish',
+					'posts_per_page' => 12,
+					'post__not_in' => array(get_the_ID()),
+					'tax_query'      => array(
+						'relation' => 'AND',
+						array(
+							'taxonomy' => 'litragem',
+							'field'    => 'slug',
+							'terms'    => $categorias[0]->slug,
+						),
+						array(
+							'taxonomy' => 'product_cat',
+							'field'    => 'slug',
+							'terms'    => $cores[0]->slug,
+						),
+				));
+				$homepagePosts = new \WP_Query( $args );
+
+				while($homepagePosts->have_posts()){
+					$homepagePosts->the_post();
+					$price = get_post_meta( get_the_ID(), '_price', true );
+					$product = wc_get_product( get_the_ID() ); ?>
+
+
+					<div class="promotionalslider_single">
+						<a href="<?php the_permalink(); ?>" class="products-banner-carousel-card underline-hover   relative">
+							<div class="products-banner-carousel-card__img-wrapper product-page-img-wrapper">
+								<img class="products-banner-carousel-card__img-wrapper--img"  src="<?php echo get_the_post_thumbnail_url( get_the_ID()) ?>" alt="imagem produto">
+							</div>
+							<div class="products-banner-carousel-card__body pt-12 px-9 pb-9">
+								<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
+									<?php echo wp_trim_words( get_the_title(), 5);  ?>
+								</h3>
+								<div class="btn-input w-full items-center justify-center mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg">
+									Onde Comprar
 								</div>
-							<?php  ?>
-					<?php } ?>
+							</div>
+
+						</a>
+
+					</div>
+				<?php } wp_reset_postdata(); ?>
 			</div>
-		</section>
-		<?php wp_reset_postdata(); ?>
+		</div>
 
 		<?php
 		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'woocommerce' ) );

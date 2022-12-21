@@ -51,19 +51,19 @@ class Search {
         <div class="" >
               ${
                 results.products.length
-                  ? '<div class="row"> <h3 class="title-3 mt-5 mb-3 text-white"> Produtos </h3> <hr class="white"> <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12"> '
-                  : '<h3 class="title-4 text-white mt-5 mb-3 text-center">nenhum produto corresponde a sua pesquisa</h3>'
+                  ? '<div class="row"> <h3 class="title-3 mt-5 mb-3 text-white font-montserrat"> Produtos </h3> <hr class="white"> <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12"> '
+                  : '<h3 class="title-4 text-white mt-12 mb-3 text-center font-montserrat">nenhum produto corresponde a sua pesquisa</h3>'
               }
                 ${results.products
                   .map(
                     (item) =>
                       `
-											<a href="${item.permalink}" class="products-banner-carousel-card underline-hover rounded-md relative bg-white">
+											<a href="${item.permalink}" class="products-banner-carousel-card underline-hover relative bg-white">
 											<div class="products-banner-carousel-card__img-wrapper">
 												<img class="products-banner-carousel-card__img-wrapper--img"  src="${item.image}" alt="imagem produto">
 											</div>
-											<div class="products-banner-carousel-card__body pt-12 px-9 pb-9">
-												<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl mb-3">
+											<div class="products-banner-carousel-card__body pt-12 px-9 pb-6">
+												<h3 class="products-banner-carousel-card__body--title title-bland text-gray-600 text-2xl">
 													${item.title}
 												</h3>
 											</div>
@@ -72,9 +72,9 @@ class Search {
                       `
                   )
                   .join("")}
-									</div><div class='btn-wraper justify-center search my-5 px-9 py-6 rounded-2xl'> <a href="${
+									</div><div class='btn-wraper justify-center search my-5 px-9 py-6'> <a href="${
                     WKodeData.root_url
-                  }/produtos" class='btn-wk text-center px-9 py-6 rounded-2xl bg-white text-dark-primary'> ver todos os Produtos </a> </div>
+                  }/produtos" class='btn-input items-center justify-center py-12 px-12 text-center border-2 border-unitermi-primary-redDark text-white font-montserrat font-bold text-3xl'> ver todos os Produtos </a> </div>
               ${results.products.length ? "</div>" : ""}
           </div>
 

@@ -2,9 +2,9 @@ import $ from "jquery";
 $(document).ready(function () {
   $(".promotionalslider_wrapper").slick({
     infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    autoplay: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: false,
     dots: false,
     arrows: true,
     prevArrow:
@@ -20,12 +20,13 @@ $(document).ready(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
+					autoplay: true,
         },
       },
     ],
   });
 });
-/* 
+/*
 $(".logo-carousel").slick({
   slidesToShow: 6,
   slidesToScroll: 1,

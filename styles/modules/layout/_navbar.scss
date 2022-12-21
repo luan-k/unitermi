@@ -1,13 +1,28 @@
+@media (max-width: 412px){
+	.logo-wraper-mob {
+		width: 15rem;
+		padding: 1.8rem 0;
+	}
+	.logo-wraper {
+		width: 42rem;
+		padding: 1.5rem 0;
+	}
+}
+.logo-wraper-mob {
+	width: 15rem;
+	padding: 1.8rem 0;
+}
 .logo-wraper {
-	width: 12rem;
+	width: 42rem;
 	padding: 1.5rem 0;
 }
+
 .icon-nav > a {
   transition: all 0.3s;
 }
 .icon-nav > a > * {
   transition: all 0.3s;
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 }
 .icon-nav > a:hover {
   color: var(--lightPrimary);
@@ -188,7 +203,7 @@ nav :nth-child(2) {
   flex-direction: column;
   left: 0;
   padding-left: .6rem;
-  min-width: 120%;
+  min-width: 150%;
   z-index: 9;
   // overflow: hidden;
   background: #a51a1d;
