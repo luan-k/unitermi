@@ -29,7 +29,7 @@
 					<img class="w-full h-auto counter__temp-img" src="<?php echo get_theme_file_uri('./assets/images/svg/counter-temp.svg')?>"  alt="">
 				</div>
 			</div>
-			<h4 class="counter__subtitle font-bold font-montserrat text-center text-unitermi-primary-redDark ">em produtos termicos</h4>
+			<h4 class="counter__subtitle font-bold font-montserrat text-center text-unitermi-primary-redDark ">em produtos térmicos</h4>
 		</div>
 		<div class="counter-card border-2 border-gray-100 py-4 px-5">
 			<h4 class="counter__main-title font-bold font-montserrat text-center text-unitermi-primary-redDark ">
@@ -37,9 +37,9 @@
 			</h4>
 			<div class="counter-inner-wraper grid grid-cols-1 md:grid-cols-3">
 				<div>
-					<img class="w-full h-auto counter__img" src="<?php echo get_theme_file_uri('./assets/images/svg/counter-bottle.svg')?>"  alt="">
+					<img class="w-full h-auto counter__img pl-4" src="<?php echo get_theme_file_uri('./assets/images/svg/counter-bottle.svg')?>"  alt="">
 				</div>
-				<h2 class="timer count-title count-number counter col-span-2 counter__number text-unitermi-primary-redDark ml-2 font-black" data-to="350" data-speed="1500"></h2>
+				<h2 class="timer count-title count-number counter col-span-2 counter__number text-unitermi-primary-redDark ml-2 font-black pl-0" data-to="350" data-speed="1500"></h2>
 			</div>
 			<h4 class="counter__subtitle font-bold font-montserrat text-center text-unitermi-primary-redDark ">Produtos diferentes,</h4>
 		</div>
