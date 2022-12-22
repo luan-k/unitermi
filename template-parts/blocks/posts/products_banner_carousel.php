@@ -128,7 +128,7 @@ if ( $title || $img || $posts) :
 													<?php echo wp_trim_words( $post_title, 5);  ?>
 												</h3>
 												<div class="btn-input w-full items-center justify-center mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
-													Onde Comprar
+													Saiba Mais
 												</div>
 											</div>
 										</a>
@@ -169,7 +169,7 @@ if ( $title || $img || $posts) :
 													<?php echo wp_trim_words( $post_title, 5);  ?>
 												</h3>
 												<div class="btn-input w-full items-center justify-center mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
-													Onde Comprar
+													Saiba Mais
 												</div>
 											</div>
 										</a>
@@ -222,7 +222,7 @@ if ( $title || $img || $posts) :
 														<?php echo wp_trim_words( get_the_title(), 5);  ?>
 													</h3>
 													<div class="btn-input w-full items-center justify-center mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
-														Onde Comprar
+														Saiba Mais
 													</div>
 												</div>
 
@@ -258,7 +258,7 @@ if ( $title || $img || $posts) :
 														<?php echo wp_trim_words( get_the_title(), 5);  ?>
 													</h3>
 													<div class="btn-input w-full items-center justify-center mt-3 py-3 px-6 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-lg whitespace-nowrap">
-														Onde Comprar
+														Saiba Mais
 													</div>
 												</div>
 

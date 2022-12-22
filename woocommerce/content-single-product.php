@@ -69,7 +69,7 @@ $code  = get_field( 'product_code' );
 		?>
 		<!-- <div class="flex items-center justify-center"> -->
 			<a href="<?php echo esc_url(site_url('/contato')); ?>" class="btn-input leading-4 items-center justify-center mt-3 mx-auto py-7 px-16 text-center border-2 border-unitermi-primary-redDark text-white font-josefin-sans font-bold text-xl">
-				Onde Comprar
+				Saiba Mais
 			</a>
 		<!-- </div> -->
 	</div>
